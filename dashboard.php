@@ -1,14 +1,5 @@
-<?php 
+<?php
 
-// Initialize the session
-session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: dashboard.php");
-  exit;
-}
- 
 ?>
 <html>
 
@@ -90,8 +81,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
             <p>19th-21st July, 2020.</p>
             <br>
-            <a href="login.php" class="button">Login</a>
-            <a href="register.php" class="button">Register</a>
+            <a href="logout.php" class="button">Logout</a>
+            <a href="rules.php" class="button">Rules</a>
             <a href="question-1.php" class="button">Play</a>
         </div>
     </div>
@@ -111,9 +102,9 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 |
                 <a href="leaderboard.php">Leaderboard</a>
                 |
-                <a href="login.php">Login</a>
+                <a href="logout.php">Logout</a>
                 |
-                <a href="register.php">Register</a>
+                <a href="rules.php">Rules</a>
                 |
                 <a href="question-1.php">PlaY</a>
             </div>
