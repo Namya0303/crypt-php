@@ -1,5 +1,10 @@
 <?php
+session_start();
 
+if (!isset($_SESSION['username'])) { 
+    $_SESSION['msg'] = "You have to log in first"; 
+    header('location: login.php'); 
+} 
 ?>
 <html>
 
@@ -76,8 +81,8 @@
     </div>
     <div class="col-md-4">
         <div class="writen right slide-right">
-            <h1>Crypt@trix</h1>
-            <p>Cryptic Hunt Event at Ordin@trix 20.0.</p>
+            <h3>Greetings <?php echo $_SESSION['username']; ?></h3>
+            <p>Welcome to Crypt@trix</p>
             <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
             <p>19th-21st July, 2020.</p>
             <br>
