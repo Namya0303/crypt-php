@@ -75,12 +75,7 @@ if (!isset($_SESSION['username'])) {
 <div class="row home">
     <div class="col-md-2"></div>
     <div class="col-md-4">
-        <center>
-            <img src="images/ordin2.png" class="img-logo invert slide-left">
-        </center>
-    </div>
-    <div class="col-md-4">
-        <div class="writen right slide-right">
+        <div class="writen left slide-left">
             <h3>Greetings <?php echo $_SESSION['username']; ?></h3>
             <p>Welcome to Crypt@trix</p>
             <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
@@ -90,6 +85,11 @@ if (!isset($_SESSION['username'])) {
             <a href="rules.php" class="button">Rules</a>
             <a href="question-1.php" class="button">Play</a>
         </div>
+    </div>
+    <div class="col-md-4">
+        <center>
+            <img src="images/ordin2.png" class="img-logo invert slide-right">
+        </center>
     </div>
     <div class="col-md-2"></div>
 </div>
