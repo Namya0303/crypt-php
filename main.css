@@ -1,25 +1,6 @@
     /* VARIABLES */
 
     :root {
-        --primary-color: #ff4545;
-        --primary-color-half: rgba(255, 69, 69, 0.5);
-        --home-color: #7b2323;
-        --secondary-color: #c23232;
-        --font-color: #000;
-        --bg-color: #fff;
-        --heading-color: rgba(0, 0, 0, 0.1);
-        --loader-bg-color: #ffffff;
-        --overlay-color: rgba(255, 255, 255, 0.5);
-        --scroll-bg-color: #ddd;
-        --scroll-fg-color: #aaa;
-        --moon: block;
-        --sun: none;
-        --invert: invert(0%);
-        --dark-image: 1;
-        --bg-img: url(images/back.png);
-    }
-
-    [data-theme="dark"] {
         --primary-color: #eb2727;
         --primary-color-half: rgba(137, 0, 0, 0.5);
         --home-color: #ff4545;
@@ -37,6 +18,25 @@
         --dark-image: 0.8;
         --red-text: #ff2a2a;
         --bg-img: url(images/back-dark.png);
+    }
+
+    [data-theme="light"] {
+        --primary-color: #ff4545;
+        --primary-color-half: rgba(255, 69, 69, 0.5);
+        --home-color: #7b2323;
+        --secondary-color: #c23232;
+        --font-color: #000;
+        --bg-color: #fff;
+        --heading-color: rgba(0, 0, 0, 0.1);
+        --loader-bg-color: #ffffff;
+        --overlay-color: rgba(255, 255, 255, 0.5);
+        --scroll-bg-color: #ddd;
+        --scroll-fg-color: #aaa;
+        --moon: block;
+        --sun: none;
+        --invert: invert(0%);
+        --dark-image: 1;
+        --bg-img: url(images/back.png);
     }
 
     /* PREREQUISITES */
@@ -129,10 +129,10 @@
 
     .mainBod::before {
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-image: var(--bg-img);
         transition: 0.4s;
-        background-position: right;
+        background-position: left;
         content: "";
         position: absolute;
         top: 0;
