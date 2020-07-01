@@ -12,12 +12,19 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
  
 
 // Define variables and initialize with empty values
-$username = $password = $confirm_password = $email = "";
-$username_err = $password_err = $confirm_password_err =  $email_err = "";
+$name = $username = $password = $confirm_password = $email = "";
+$name_err = $username_err = $password_err = $confirm_password_err =  $email_err = "";
 
 //processing form data when it is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+    //Fullname -->
+    if(empty($_POST["name"])){
+        $name_err = "Please enter your Full Name";
+    } else{
+        $name = trim($_POST["name"]);
+    }
+    
     //validate username
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a Username.";
@@ -55,36 +62,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //validate Email Id
     if(empty(trim($_POST["email"]))){
-        $email_err = "Please enter an Email Id.";
-    } else{
-        //prepare a select statement
-        $sql = "SELECT id FROM users WHERE email = ?";
-
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_email);
-
-            // SSet parameters
-            $param_email = trim($_POST["email"]);
-
-            //Execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Store result
-                mysqli_stmt_store_result($stmt);
-                
-                // Check if email alreday exists
-                if(mysqli_stmt_num_rows($stmt) == 1){
-                    $email_err = "This email id is already linked to another account.";
-                } else{
-                    $email = trim($_POST["email"]);
-                }
-            } else{
-                echo "Something went Wrong. Please try again.";
-            }
-        
-            //Close statement
-            mysqli_stmt_close($stmt);
-        }
+        $email_err = "Email Id is required";
+    }
+    else{
+        $email = trim($_POST["email"]);
     }
 
     // VALIDATE PASSWORD
@@ -109,18 +90,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     //check input errors before inserting into database
-    if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+    if(empty($username_err) && empty($name_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO users (name, username, password, email) VALUES (?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             //Bind variables to the prepared insert statementt as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_username, $param_password, $param_email);
 
             //set parameters
+            $param_name = $name;
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
+            $param_email = $email;
 
             // Execute the prepared statment
             if(mysqli_stmt_execute($stmt)){
@@ -216,6 +199,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="writen right">
             <h2>Register</h2>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+                <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>"> 
+                    <input name="name" type="text" placeholder="Full Name" value="<?php echo $name ; ?>"><br>
+                    <span class="help-block"><?php echo $name_err; ?></span>
+                </div>
 
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>"> 
                     <input name="username" type="text" placeholder="Username" value="<?php echo $username ; ?>"><br>
