@@ -12,8 +12,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
  
 
 // Define variables and initialize with empty values
-$name = $username = $password = $confirm_password = $email = "";
-$name_err = $username_err = $password_err = $confirm_password_err =  $email_err = "";
+$name = $school = $username = $password = $confirm_password = $email = "";
+$name_err = $school_err = $username_err = $password_err = $confirm_password_err =  $email_err = "";
 
 //processing form data when it is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -25,6 +25,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = trim($_POST["name"]);
     }
     
+    //School -->
+    if($_POST["school"] === "1"){
+        $school_err = "Please select your school";
+    } else{
+        $school = trim($_POST["school"]);
+    }
     //validate username
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a Username.";
@@ -90,17 +96,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     //check input errors before inserting into database
-    if(empty($username_err) && empty($name_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+    if(empty($username_err) && empty($name_err) && empty($school_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (name, username, password, email) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO users (name, school, username, password, email) VALUES (?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             //Bind variables to the prepared insert statementt as parameters
-            mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_username, $param_password, $param_email);
+            mysqli_stmt_bind_param($stmt, "sssss", $param_name, $param_school, $param_username, $param_password, $param_email);
 
             //set parameters
             $param_name = $name;
+            $param_school = $school;
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             $param_email = $email;
@@ -166,7 +173,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <a href="index.html" class="logo-nav"><img src="images/ordin.png"></a>
-            <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
+            <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
         </div>
         <div class="col-md-2"></div>
     </div>
@@ -203,6 +210,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>"> 
                     <input name="name" type="text" placeholder="Full Name" value="<?php echo $name ; ?>"><br>
                     <span class="help-block"><?php echo $name_err; ?></span>
+                </div>
+
+                <div class="form-group"> 
+                <select name="school" value="<?php echo $school ; ?>">
+                    <option value = "1">Select School</option>
+                    <option value = "DPSSL">DPS Sushant Lok</option>
+                    <option value = "3">St. Marks</option>
+                    <option value = "4">GD Goenka</option>
+                </select>
+                <span class="help-block"><?php echo $school_err; ?></span>
                 </div>
 
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>"> 

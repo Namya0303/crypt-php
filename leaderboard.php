@@ -42,7 +42,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
-            <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
+            <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
         </div>
         <div class="col-md-2"></div>
     </div>

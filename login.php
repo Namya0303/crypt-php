@@ -61,7 +61,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
+                            $_SESSION["username"] = $username;
+                            $_SESSION["level"] = $lvl;
+                            $_SESSION["point"] = $points;            
                             
                             // Redirect user to welcome page
                             header("location: dashboard.php");
@@ -131,7 +133,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
-            <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
+            <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
         </div>
         <div class="col-md-2"></div>
     </div>

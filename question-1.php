@@ -5,7 +5,13 @@ if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first"; 
     header('location: login.php'); 
 } 
- 
+// get current logged in user level
+require_once "config.php";
+$loggedInUsername = $_SESSION['username'];
+$id = $_SESSION['id'];
+$result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
+$result = mysqli_fetch_row($result);
+$level = $result[0]??null;
 ?>
 
 <html>
@@ -73,14 +79,15 @@ if (!isset($_SESSION['username'])) {
 </div>
 
     <!--- HOME --->
-
+ <?php if($level == 0) :?>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <div class="writen center fade">
-            <h2>Question 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
-            <form>
+            <h2>Question 0</h2>
+            <p> Chal na bey</p>
+
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
@@ -95,6 +102,31 @@ if (!isset($_SESSION['username'])) {
     </div>
     <div class="col-md-2"></div>
 </div>
+<?php endif; ?>
+
+<?php if($level == 1) :?>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="writen center fade">
+            <h2>Question 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety <?php echo $_SESSION["level"] ?></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <input placeholder="Answer" name="answer-2" type="text"><br>
+                        <span class="red">Wrong Answer<br></span>
+                        <input class="button" type="submit" value="Submit">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<?php endif; ?>
 
     <!---  FOOTER   --->
 
