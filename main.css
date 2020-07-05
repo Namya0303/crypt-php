@@ -447,6 +447,21 @@
         padding-bottom: 30;
     }
 
+    .logout {
+        font-size: 30;
+        color: var(--font-color);
+        opacity: 0.7;
+        transition: 0.25s;
+        text-decoration: none;
+        padding: 0 15;
+    }
+
+    .logout:hover {
+        opacity: 1;
+        text-decoration: none;
+        color: var(--font-color);
+    }
+
     /* LEADERBOARD */
 
     .leaderboard {
@@ -521,6 +536,10 @@
 
     .email:hover {
         color: #B23121;
+    }
+
+    .instagram:hover {
+        color: #E1306C;
     }
 
     .red {

@@ -96,120 +96,124 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <head>
 
-<title>Crypt@trix | Ordina@trix 20.0</title>
+    <title>Crypt@trix | Ordina@trix 20.0</title>
 
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,400italic,500,100italic,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
-<link href='main.css' rel='stylesheet' type='text/css'>
-<link rel="icon" href="images/favicon.png" type="image/png">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,400italic,500,100italic,700' rel='stylesheet' type='text/css'>
+    <script src="fontawesome.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+    <link href='main.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
+
 <body onload="myFunction()">
 
     <!---  LOADER   --->
 
-<div class="load" id="load">
-    <center>
-        <div class="loader">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-        </div>
-    </center>
-</div>
-
-
-<div class="mainBod" id="mainBod">
-
-    <!---  NAVBAR   --->
-
-<div class="navbar">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
-            <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
-        </div>
-        <div class="col-md-2"></div>
-    </div>
-</div>
-
-    <!--- DARK MODE SWITCH --->
-
-<div class="theme-switch-wrapper">
-    <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round">
-            <center>
-                <img src="images/sun.png" class="sun">
-                <img src="images/moon.png" class="moon">
-            </center>
-        </div>
-    </label>
-</div>
-
-    <!--- HOME --->
-
-<div class="row home fade">
-    <div class="col-md-2"></div>
-    <div class="col-md-4">
+    <div class="load" id="load">
         <center>
-            <img src="images/ordin2.png" class="img-logo invert">
+            <div class="loader">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
         </center>
     </div>
-    <div class="col-md-4">
-        <div class="writen right">
-            <h2>Login</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                    <input placeholder="Username" name="username" type="text"><br>
-                    <span class="help-block"><?php echo $username_err; ?></span>
+
+
+    <div class="mainBod" id="mainBod">
+
+        <!---  NAVBAR   --->
+
+        <div class="navbar">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
                 </div>
-                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                    <input placeholder="Password" name="password" type="password"><br>
-                    <span class="help-block"><?php echo $password_err; ?></span>
-                </div>
-                    <p>Don't have an account yet? <a class="blue" href="register.php">Register.</a></p><br><br>
-                    <input class="button" type="submit" name="log-in" value="Log In">
-            </form>
+                <div class="col-md-2"></div>
+            </div>
         </div>
+
+        <!--- DARK MODE SWITCH --->
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <center>
+                        <img src="images/sun.png" class="sun">
+                        <img src="images/moon.png" class="moon">
+                    </center>
+                </div>
+            </label>
+        </div>
+
+        <!--- HOME --->
+
+        <div class="row home fade">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <center>
+                    <img src="images/ordin2.png" class="img-logo invert">
+                </center>
+            </div>
+            <div class="col-md-4">
+                <div class="writen right">
+                    <h2>Login</h2>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                            <input placeholder="Username" name="username" type="text"><br>
+                            <span class="help-block"><?php echo $username_err; ?></span>
+                        </div>
+                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                            <input placeholder="Password" name="password" type="password"><br>
+                            <span class="help-block"><?php echo $password_err; ?></span>
+                        </div>
+                        <p>Don't have an account yet? <a class="blue" href="register.php">Register.</a></p><br><br>
+                        <input class="button" type="submit" name="log-in" value="Log In">
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <!---  FOOTER   --->
+
+        <div id="end">
+            <center>
+                <div class="footer-text">
+                    <a href="https://discord.gg/GCbVdag" class="page-links discord" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.facebook.com/Ordinatrix20.0/" class="page-links facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/ordinatrix20.0/" class="page-links instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <div class="footer-copy font-alt">
+                        <a href="index.php">Home</a>
+                        |
+                        <a href="leaderboard.php">Leaderboard</a>
+                        |
+                        <a href="login.php">Login</a>
+                        |
+                        <a href="register.php">Register</a>
+                        |
+                        <a href="question-1.php">PlaY</a>
+                    </div>
+                    <div class="footer-copy font-alt">
+                        © Pyrotech Club 2020
+                    </div>
+                </div>
+            </center>
+        </div>
+
     </div>
-    <div class="col-md-2"></div>
-</div>
 
-    <!---  FOOTER   --->
-
-<div id="end">
-    <center>
-        <div class="footer-text">
-            <a href="https://discord.gg/3TH32ev" class="page-links discord" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.facebook.com/ordinatrix19.0/" class="page-links facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
-            <div class="footer-copy font-alt">
-                <a href="index.php">Home</a>
-                |
-                <a href="leaderboard.php">Leaderboard</a>
-                |
-                <a href="login.php">Login</a>
-                |
-                <a href="register.php">Register</a>
-                | 
-                <a href="question-1.php">PlaY</a>
-            </div>
-            <div class="footer-copy font-alt">
-                © Pyrotech Club 2020
-            </div>
-        </div>
-    </center>
-</div>
-
-</div>
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
