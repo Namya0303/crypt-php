@@ -86,13 +86,32 @@ $level = $result[0]??null;
         <div class="writen center fade">
             <h2>Question 0</h2>
             <p> Chal na bey</p>
+            <?php 
+            //Answer check -->
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $answer = $answer_err = "";
 
+                if(empty($_POST["answer-1"])){
+                    $answer_err = "Please enter an answer";
+                } else{
+                    $answer = trim($_POST["answer-1"]);
+                }
+
+                if($answer == "lorem"){
+                    $sql = "UPDATE users SET lvl= $level+1 , points= +200 WHERE id=$id";
+                    // Prepare statement
+                    $stmt = $link->prepare($sql);
+                    // execute the query
+                    $stmt->execute();
+                }
+            }
+            ?>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <input placeholder="Answer" name="answer-1" type="text"><br>
-                        <span class="red">Wrong Answer<br></span>
+                        <span class="red"><?php echo $answer_err ?><br></span>
                         <input class="button" type="submit" value="Submit">
                     </div>
                     <div class="col-md-2"></div>
@@ -110,12 +129,76 @@ $level = $result[0]??null;
     <div class="col-md-8">
         <div class="writen center fade">
             <h2>Question 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety <?php echo $_SESSION["level"] ?></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
+            <?php 
+            //Answer check -->
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $answer = $answer_err = "";
+
+                if(empty($_POST["answer-2"])){
+                    $answer_err = "Please enter an answer";
+                } else{
+                    $answer = trim($_POST["answer-2"]);
+                }
+
+                if($answer == "ipsum"){
+                    $sql = "UPDATE users SET lvl= +1 , points= +200 WHERE id=$id";
+                    // Prepare statement
+                    $stmt = $link->prepare($sql);
+                    // execute the query
+                    $stmt->execute();
+                }
+            }
+            ?>
             <form>
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <input placeholder="Answer" name="answer-2" type="text"><br>
+                        <span class="red"><?php echo $answer_err ?><br></span>
+                        <input class="button" type="submit" value="Submit">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<?php endif; ?>
+
+<?php if($level == 3) :?>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="writen center fade">
+            <h2>Question 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
+            <?php 
+            //Answer check -->
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $answer = $answer_err = "";
+
+                if(empty($_POST["answer-3"])){
+                    $answer_err = "Please enter an answer";
+                } else{
+                    $answer = trim($_POST["answer-3"]);
+                }
+
+                if($answer == "lorem"){
+                    $sql = "UPDATE users SET lvl= +1 , points= +200 WHERE id=$id";
+                    // Prepare statement
+                    $stmt = $link->prepare($sql);
+                    // execute the query
+                    $stmt->execute();
+                }
+            }
+            ?>
+            <form>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <input placeholder="Answer" name="answer-3" type="text"><br>
                         <span class="red">Wrong Answer<br></span>
                         <input class="button" type="submit" value="Submit">
                     </div>
