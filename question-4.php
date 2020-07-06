@@ -23,11 +23,11 @@ $htmlno = $result[0]??null;
 if($htmlno == 1){
     header('location: question-1.php');
 }
+if($htmlno == 2){
+    header('location: question-2.php');
+}
 if($htmlno == 3){
     header('location: question-3.php');
-}
-if($htmlno == 4){
-    header('location: question-4.php');
 }
 if($htmlno == 5){
     header('location: question-5.php');
@@ -74,6 +74,7 @@ $level = $result[0]??null;
         </center>
     </div>
 
+
     <div class="mainBod" id="mainBod">
 
         <!---  NAVBAR   --->
@@ -105,12 +106,12 @@ $level = $result[0]??null;
 
         <!--- HOME --->
 
-        <?php if ($level == 1): ?>
+        <?php if ($level == 3): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
-                    <h2>Question 1</h2>
+                    <h2>Question 3</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
                     <?php
     //Answer check -->
@@ -118,28 +119,28 @@ $level = $result[0]??null;
     {
         $answer = "";
 
-        if (empty($_POST["answer-1"]))
+        if (empty($_POST["answer-3"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-1"]);
+            $answer = trim($_POST["answer-3"]);
         }
 
-        if ($answer == "ipsum")
+        if ($answer == "dolar")
         {
-            $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl, htmlno = 3 WHERE id=$id";
+            $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 5 WHERE id=$id";
             // Prepare statement
             $stmt = $link->prepare($sql);
             // execute the query
             $stmt->execute();
 
-            header('location: question-3.php');
+            header('location: question-5.php');
         }
         else
         {
-            $answer_err = "Wrong Answer! Try Again.";
+            $answer_err = "Wrong Answer! Please try again.";
         }
     }
 ?>
@@ -147,7 +148,7 @@ $level = $result[0]??null;
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
+                                <input placeholder="Answer" name="answer-3" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
                                 <input class="button" type="submit" value="Submit">
                             </div>
@@ -158,10 +159,7 @@ $level = $result[0]??null;
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
-
-
+        <?php endif; ?>
 
         <!---  FOOTER   --->
 

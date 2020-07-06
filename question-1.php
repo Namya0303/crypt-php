@@ -16,6 +16,23 @@ $points_dare = 100;
 $lvlup = 1;
 $answer_err = "";
 
+//getting htmlno
+$result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
+$result = mysqli_fetch_row($result);
+$htmlno = $result[0]??null;
+if($htmlno == 2){
+    header('location: question-2.php');
+}
+if($htmlno == 3){
+    header('location: question-3.php');
+}
+if($htmlno == 4){
+    header('location: question-4.php');
+}
+if($htmlno == 5){
+    header('location: question-5.php');
+}
+
 //getting user lvl
 $result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
@@ -113,11 +130,13 @@ $level = $result[0]??null;
 
         if ($answer == "lorem")
         {
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl WHERE id=$id";
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
             // Prepare statement
             $stmt = $link->prepare($sql);
             // execute the query
             $stmt->execute();
+
+            header('location: question-2.php');
         }
     }
 ?>
@@ -139,113 +158,9 @@ $level = $result[0]??null;
         <?php
 endif; ?>
 
-        <?php if ($level == 1): ?>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="writen center fade">
-                    <h2>Question 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
-                    <?php
-    //Answer check -->
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $answer = "";
+        
 
-        if (empty($_POST["answer-1"]))
-        {
-            $answer_err = "Please enter an answer";
-        }
-        else
-        {
-            $answer = trim($_POST["answer-1"]);
-        }
-
-        if ($answer == "ipsum")
-        {
-            $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-        }
-        else
-        {
-            $answer_err = "Wrong Answer! Try Again.";
-        }
-    }
-?>
-                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
-                                <span class="red"><?php echo $answer_err ?><br></span>
-                                <input class="button" type="submit" value="Submit">
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        <?php
-endif; ?>
-
-        <?php if ($level == 2): ?>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="writen center fade">
-                    <h2>Question 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
-                    <?php
-    //Answer check -->
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $answer = "";
-
-        if (empty($_POST["answer-2"]))
-        {
-            $answer_err = "Please enter an answer";
-        }
-        else
-        {
-            $answer = trim($_POST["answer-2"]);
-        }
-
-        if ($answer == "hui")
-        {
-            $sql = "UPDATE users SET lvl = lvl + 1 , points= points + 200 WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-        }
-        else
-        {
-            $answer_err = "Wrong Answer! Please try again.";
-        }
-    }
-?>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-2" type="text"><br>
-                                <span class="red"><?php echo $answer_err ?><br></span>
-                                <input class="button" type="submit" value="Submit">
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        <?php
-endif; ?>
+        
 
 
 <?php if ($level == 3): ?>

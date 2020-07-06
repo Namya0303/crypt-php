@@ -5,6 +5,38 @@ if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first"; 
     header('location: login.php'); 
 } 
+
+// settinng variables
+require_once "config.php";
+clearstatcache();
+$loggedInUsername = $_SESSION['username'];
+$id = $_SESSION['id'];
+$points_lvl = 200;
+$points_dare = 100;
+$lvlup = 1;
+$answer_err = "";
+
+//getting htmlno
+$result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
+$result = mysqli_fetch_row($result);
+$htmlno = $result[0]??null;
+if($htmlno == 1){
+    header('location: question-1.php');
+}
+if($htmlno == 2){
+    header('location: question-2.php');
+}
+if($htmlno == 4){
+    header('location: question-4.php');
+}
+if($htmlno == 5){
+    header('location: question-5.php');
+}
+
+//getting user lvl
+$result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
+$result = mysqli_fetch_row($result);
+$level = $result[0]??null;
 ?>
 <html>
 
@@ -74,19 +106,50 @@ if (!isset($_SESSION['username'])) {
 
         <!--- HOME --->
 
+        <?php if ($level == 2): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
-                    <h2>Question 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The image variety</p>
-                    <img class="question-image" src="images/question-3.jpg">
-                    <form>
+                    <h2>Question 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer-2"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-2"]);
+        }
+
+        if ($answer == "hui")
+        {
+            $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 4 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-4.php');
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Please try again.";
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-3" type="text"><br>
-                                <span class="red">Wrong Answer<br></span>
+                                <input placeholder="Answer" name="answer-2" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
                                 <input class="button" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
@@ -96,6 +159,8 @@ if (!isset($_SESSION['username'])) {
             </div>
             <div class="col-md-2"></div>
         </div>
+        <?php
+endif; ?>
 
         <!---  FOOTER   --->
 

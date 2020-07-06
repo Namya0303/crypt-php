@@ -218,8 +218,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <select name="school" value="<?php echo $school ; ?>">
                                 <option value="1">Select School</option>
                                 <option value="DPSSL">DPS Sushant Lok</option>
-                                <option value="3">St. Marks</option>
-                                <option value="4">GD Goenka</option>
+                                <option value="St. Marks">St. Marks</option>
+                                <option value="GD Goenka VK">GD Goenka</option>
+                                <option value="DPS Indirapuram">DPS Indirapuram</option>
+                                <option value="AFBBS">Air Force Bal Bharti</option>
+                                <option value="DPSRKP">DPS RK Puram</option>
                             </select>
                             <span class="help-block"><?php echo $school_err; ?></span>
                         </div>
