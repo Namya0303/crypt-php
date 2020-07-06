@@ -272,7 +272,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         |
                         <a href="login.php">Login</a>
                         |
-                        <a href="register.php">Register</a>
+                        <a href="rules.php">Rules</a>
                         |
                         <a href="question-1.php">PlaY</a>
                     </div>

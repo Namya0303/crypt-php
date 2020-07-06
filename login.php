@@ -198,7 +198,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         |
                         <a href="leaderboard.php">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="rules.php">Rules</a>
                         |
                         <a href="register.php">Register</a>
                         |

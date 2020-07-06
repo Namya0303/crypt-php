@@ -8,6 +8,7 @@ if (!isset($_SESSION['username']))
 }
 // settinng variables
 require_once "config.php";
+clearstatcache();
 $loggedInUsername = $_SESSION['username'];
 $id = $_SESSION['id'];
 $points_lvl = 200;
@@ -66,7 +67,7 @@ $level = $result[0]??null;
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a hsref="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -101,13 +102,13 @@ $level = $result[0]??null;
     {
         $answer = "";
 
-        if (empty($_POST["answer-1"]))
+        if (empty($_POST["answer-0"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-1"]);
+            $answer = trim($_POST["answer-0"]);
         }
 
         if ($answer == "lorem")
@@ -124,7 +125,7 @@ $level = $result[0]??null;
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
+                                <input placeholder="Answer" name="answer-0" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
                                 <input class="button" type="submit" value="Submit">
                             </div>
@@ -151,18 +152,18 @@ endif; ?>
     {
         $answer = "";
 
-        if (empty($_POST["answer-2"]))
+        if (empty($_POST["answer-1"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-2"]);
+            $answer = trim($_POST["answer-1"]);
         }
 
         if ($answer == "ipsum")
         {
-            $sql = "UPDATE users SET lvl= lvl + $lvlup && points= points + $points_lvl WHERE id=$id";
+            $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl WHERE id=$id";
             // Prepare statement
             $stmt = $link->prepare($sql);
             // execute the query
@@ -178,7 +179,7 @@ endif; ?>
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-2" type="text"><br>
+                                <input placeholder="Answer" name="answer-1" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
                                 <input class="button" type="submit" value="Submit">
                             </div>
@@ -205,6 +206,61 @@ endif; ?>
     {
         $answer = "";
 
+        if (empty($_POST["answer-2"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-2"]);
+        }
+
+        if ($answer == "hui")
+        {
+            $sql = "UPDATE users SET lvl = lvl + 1 , points= points + 200 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Please try again.";
+        }
+    }
+?>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input placeholder="Answer" name="answer-2" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input class="button" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php
+endif; ?>
+
+
+<?php if ($level == 3): ?>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
         if (empty($_POST["answer-3"]))
         {
             $answer_err = "Please enter an answer";
@@ -214,7 +270,7 @@ endif; ?>
             $answer = trim($_POST["answer-3"]);
         }
 
-        if ($answer == "lorem")
+        if ($answer == "dolar")
         {
             $sql = "UPDATE users SET lvl = lvl + 1 , points= points + 200 WHERE id=$id";
             // Prepare statement
@@ -243,8 +299,7 @@ endif; ?>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
+        <?php endif; ?>
 
         <!---  FOOTER   --->
 

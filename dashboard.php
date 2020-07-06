@@ -5,6 +5,20 @@ if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first"; 
     header('location: login.php'); 
 } 
+
+
+//setting variables
+require_once "config.php";
+$id = $_SESSION['id'];
+
+//getting user lvl
+$result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
+$result = mysqli_fetch_row($result);
+$level = $result[0]??null;
+//getting user points
+$result = mysqli_query($link, "SELECT points FROM users WHERE id =$id");
+$result = mysqli_fetch_row($result);
+$points = $result[0]??null;
 ?>
 <html>
 
@@ -80,7 +94,8 @@ if (!isset($_SESSION['username'])) {
                 <div class="writen left slide-left">
                     <h3>Greetings <?php echo $_SESSION['username']; ?><a href="logout.php" class="logout"><i class="fal fa-sign-out"></i></a></h3>
                     <p>Welcome to Crypt@trix</p>
-                    <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
+                    <p><b>Your Level: </b><?php echo $level ?></p>
+                    <p><b>Your Points: </b><?php echo $points ?></p>
                     <p>19th-21st July, 2020.</p>
                     <br>
                     <a href="rules.php" class="button">Rules</a>

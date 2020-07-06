@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) { 
+    $_SESSION['msg'] = "You have to log in first"; 
+    header('location: login.php'); 
+} 
+?>
 <html>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,7 +125,7 @@
                         |
                         <a href="leaderboard.php">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="rules.php">Rules</a>
                         |
                         <a href="register.php">Register</a>
                         |
