@@ -388,6 +388,16 @@
         font-weight: 500;
     }
 
+    .writen p span {
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .writen p:hover span {
+        color: var(--secondary-color);
+        letter-spacing: 1px;
+    }
+
     .img-logo {
         max-width: 100%;
         opacity: 0.9;
