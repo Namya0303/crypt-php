@@ -1,14 +1,21 @@
-<?php 
+<?php
 session_start();
 
-if (!isset($_SESSION['username'])) { 
-    $_SESSION['msg'] = "You have to log in first"; 
-    header('location: login.php'); 
-} 
-// get current logged in user level
+if (!isset($_SESSION['username']))
+{
+    $_SESSION['msg'] = "You have to log in first";
+    header('location: login.php');
+}
+// settinng variables
 require_once "config.php";
 $loggedInUsername = $_SESSION['username'];
 $id = $_SESSION['id'];
+$points_lvl = 200;
+$points_dare = 100;
+$lvlup = 1;
+$answer_err = "";
+
+//getting user lvl
 $result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $level = $result[0]??null;
@@ -59,7 +66,7 @@ $level = $result[0]??null;
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a hsref="index.php" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -81,33 +88,38 @@ $level = $result[0]??null;
         </div>
 
         <!--- HOME --->
-        <?php if($level == 0) :?>
+        <?php if ($level == 0): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 0</h2>
                     <p> Chal na bey</p>
-                    <?php 
-            //Answer check -->
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $answer = $answer_err = "";
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
 
-                if(empty($_POST["answer-1"])){
-                    $answer_err = "Please enter an answer";
-                } else{
-                    $answer = trim($_POST["answer-1"]);
-                }
+        if (empty($_POST["answer-1"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-1"]);
+        }
 
-                if($answer == "lorem"){
-                    $sql = "UPDATE users SET lvl= $level+1 , points= +200 WHERE id=$id";
-                    // Prepare statement
-                    $stmt = $link->prepare($sql);
-                    // execute the query
-                    $stmt->execute();
-                }
-            }
-            ?>
+        if ($answer == "lorem")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+        }
+    }
+?>
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                         <div class="row">
                             <div class="col-md-2"></div>
@@ -123,36 +135,46 @@ $level = $result[0]??null;
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php endif; ?>
+        <?php
+endif; ?>
 
-        <?php if($level == 1) :?>
+        <?php if ($level == 1): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 1</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
-                    <?php 
-            //Answer check -->
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $answer = $answer_err = "";
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
 
-                if(empty($_POST["answer-2"])){
-                    $answer_err = "Please enter an answer";
-                } else{
-                    $answer = trim($_POST["answer-2"]);
-                }
+        if (empty($_POST["answer-2"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-2"]);
+        }
 
-                if($answer == "ipsum"){
-                    $sql = "UPDATE users SET lvl= +1 , points= +200 WHERE id=$id";
-                    // Prepare statement
-                    $stmt = $link->prepare($sql);
-                    // execute the query
-                    $stmt->execute();
-                }
-            }
-            ?>
-                    <form>
+        if ($answer == "ipsum")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup && points= points + $points_lvl WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Try Again.";
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
@@ -167,41 +189,51 @@ $level = $result[0]??null;
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php endif; ?>
+        <?php
+endif; ?>
 
-        <?php if($level == 3) :?>
+        <?php if ($level == 2): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
-                    <h2>Question 3</h2>
+                    <h2>Question 2</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
-                    <?php 
-            //Answer check -->
-            if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $answer = $answer_err = "";
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
 
-                if(empty($_POST["answer-3"])){
-                    $answer_err = "Please enter an answer";
-                } else{
-                    $answer = trim($_POST["answer-3"]);
-                }
+        if (empty($_POST["answer-3"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-3"]);
+        }
 
-                if($answer == "lorem"){
-                    $sql = "UPDATE users SET lvl= +1 , points= +200 WHERE id=$id";
-                    // Prepare statement
-                    $stmt = $link->prepare($sql);
-                    // execute the query
-                    $stmt->execute();
-                }
-            }
-            ?>
+        if ($answer == "lorem")
+        {
+            $sql = "UPDATE users SET lvl = lvl + 1 , points= points + 200 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Please try again.";
+        }
+    }
+?>
                     <form>
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
                                 <input placeholder="Answer" name="answer-3" type="text"><br>
-                                <span class="red">Wrong Answer<br></span>
+                                <span class="red"><?php echo $answer_err ?><br></span>
                                 <input class="button" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
@@ -211,7 +243,8 @@ $level = $result[0]??null;
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php endif; ?>
+        <?php
+endif; ?>
 
         <!---  FOOTER   --->
 
@@ -227,7 +260,7 @@ $level = $result[0]??null;
                         |
                         <a href="leaderboard.php">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="logout.php">Logout</a>
                         |
                         <a href="register.php">Register</a>
                         |

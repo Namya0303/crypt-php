@@ -109,7 +109,7 @@ if (!isset($_SESSION['username'])) {
                         |
                         <a href="leaderboard.php">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="logout.php">Logout</a>
                         |
                         <a href="register.php">Register</a>
                         |
