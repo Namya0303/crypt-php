@@ -94,8 +94,8 @@ $points = $result[0]??null;
                 <div class="writen left slide-left">
                     <h3>Greetings <?php echo $_SESSION['username']; ?><a href="logout.php" class="logout"><i class="fal fa-sign-out"></i></a></h3>
                     <p>Welcome to Crypt@trix</p>
-                    <p><b>Your Level: </b><?php echo $level ?></p>
-                    <p><b>Your Points: </b><?php echo $points ?></p>
+                    <p><b>Your Level: </b><span><?php echo $level ?></span></p>
+                    <p><b>Your Points: </b><span><?php echo $points ?></span></p>
                     <p>19th-21st July, 2020.</p>
                     <br>
                     <a href="rules.php" class="button">Rules</a>

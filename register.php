@@ -99,11 +99,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($name_err) && empty($school_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (name, school, username, password, email) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (name, school, username, password, email, htmlno) VALUES (?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             //Bind variables to the prepared insert statementt as parameters
-            mysqli_stmt_bind_param($stmt, "sssss", $param_name, $param_school, $param_username, $param_password, $param_email);
+            mysqli_stmt_bind_param($stmt, "sssssi", $param_name, $param_school, $param_username, $param_password, $param_email, $param_htmlno);
 
             //set parameters
             $param_name = $name;
@@ -111,6 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             $param_email = $email;
+            $param_htmlno = 1;
 
             // Execute the prepared statment
             if(mysqli_stmt_execute($stmt)){

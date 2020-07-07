@@ -20,6 +20,9 @@ $answer_err = "";
 $result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $htmlno = $result[0]??null;
+if($htmlno == 0){
+    header('location: question-1.php');
+}
 if($htmlno == 1){
     header('location: question-1.php');
 }
@@ -31,6 +34,9 @@ if($htmlno == 4){
 }
 if($htmlno == 5){
     header('location: question-5.php');
+}
+if($htmlno !== 2){
+    header('404.html');
 }
 
 //getting user lvl

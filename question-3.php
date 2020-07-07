@@ -32,6 +32,9 @@ if($htmlno == 4){
 if($htmlno == 5){
     header('location: question-5.php');
 }
+if($htmlno !== 3){
+    header('404.html');
+}
 
 //getting user lvl
 $result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
