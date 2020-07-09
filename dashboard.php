@@ -96,7 +96,7 @@ $points = $result[0]??null;
                     <p>Welcome to Crypt@trix</p>
                     <p><b>Your Level: </b><span><?php echo $level ?></span></p>
                     <p><b>Your Points: </b><span><?php echo $points ?></span></p>
-                    <p>19th-21st July, 2020.</p>
+                    <p>July, 2020.</p>
                     <br>
                     <a href="rules.php" class="button">Rules</a>
                     <a href="question-1.php" class="button">Play</a>

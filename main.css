@@ -479,6 +479,10 @@
         margin: 20 0;
     }
 
+    tr:nth-child(odd){
+        background-color: var(--heading-color);
+    }
+
     .rank,
     .name,
     .level {
@@ -496,10 +500,6 @@
 
     .level {
         width: 20%;
-    }
-
-    .lighter {
-        background-color: var(--heading-color);
     }
 
     /* END */

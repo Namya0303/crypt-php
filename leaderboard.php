@@ -5,6 +5,10 @@ if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You have to log in first"; 
     header('location: login.php'); 
 } 
+
+require_once "config.php";
+
+
 ?>
 <html>
 
@@ -79,38 +83,35 @@ if (!isset($_SESSION['username'])) {
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Leaderboard </h2>
-                    <table class="leaderboard">
-                        <tr class="lighter">
-                            <th class="rank">Rank</th>
-                            <th class="name">Name</th>
-                            <th class="level">Level</th>
-                        </tr>
-                        <tr>
-                            <td class="rank">0</td>
-                            <td class="name">Pyrotech</td>
-                            <td class="level">&infin;</td>
-                        </tr>
-                        <tr class="lighter">
-                            <td class="rank">Rank</td>
-                            <td class="name">Name</td>
-                            <td class="level">Level</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">Rank</td>
-                            <td class="name">Name</td>
-                            <td class="level">Level</td>
-                        </tr>
-                        <tr class="lighter">
-                            <td class="rank">Rank</td>
-                            <td class="name">Name</td>
-                            <td class="level">Level</td>
-                        </tr>
-                    </table>
+                    <?php 
+                    $result = mysqli_query($link,"SELECT username, lvl, points FROM users ORDER BY points DESC");
+                    
+                    
+                    echo "
+                    <table class='leaderboard'>
+                        <tr class='lighter'>
+                            <th class='rank'>Rank</th>
+                            <th class='name'>Name</th>
+                            <th class='level'>Level</th>
+                            <th class='points'>Points</th>
+                        </tr> "; 
+                        $rowNumber = 0;
+                        while($row = mysqli_fetch_array($result)){
+                            $rowNumber++;
+                        echo "<tr>";
+                            echo "<td class='rank'>" . $rowNumber . "</td>";
+                            echo "<td class='name'>" . $row['username'] . "</td>";
+                            echo "<td class='level'>". $row['lvl'] . "</td>";
+                            echo "<td class='points'>". $row['points'] . "</td>";
+                        echo "</tr>";
+                     } 
+                     echo "</table>";
+                     ?>
                 </div>
             </div>
             <div class="col-md-2"></div>
         </div>
-
+<br>
         <!---  FOOTER   --->
 
         <div id="end">

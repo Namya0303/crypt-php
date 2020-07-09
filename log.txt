@@ -7,3 +7,46 @@
 [07-Jul-2020 06:17:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
 [07-Jul-2020 06:17:54 Europe/Berlin] PHP Notice:  Undefined variable: lvl in C:\xampp\htdocs\crypt\crypt-php\login.php on line 65
 [07-Jul-2020 06:17:54 Europe/Berlin] PHP Notice:  Undefined variable: points in C:\xampp\htdocs\crypt\crypt-php\login.php on line 66
+[07-Jul-2020 07:08:06 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 94
+[07-Jul-2020 07:09:15 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 96
+[07-Jul-2020 07:17:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
+[07-Jul-2020 07:17:42 Europe/Berlin] PHP Notice:  Undefined variable: lvl in C:\xampp\htdocs\crypt\crypt-php\login.php on line 65
+[07-Jul-2020 07:17:42 Europe/Berlin] PHP Notice:  Undefined variable: points in C:\xampp\htdocs\crypt\crypt-php\login.php on line 66
+[07-Jul-2020 07:29:13 Europe/Berlin] PHP Warning:  Use of undefined constant row_num - assumed 'row_num' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[07-Jul-2020 07:29:13 Europe/Berlin] PHP Warning:  Use of undefined constant row_num - assumed 'row_num' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[07-Jul-2020 07:36:24 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 98
+[07-Jul-2020 07:42:00 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 97
+[07-Jul-2020 07:42:20 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 97
+[07-Jul-2020 08:58:52 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
+[07-Jul-2020 08:58:53 Europe/Berlin] PHP Notice:  Undefined variable: lvl in C:\xampp\htdocs\crypt\crypt-php\login.php on line 65
+[07-Jul-2020 08:58:53 Europe/Berlin] PHP Notice:  Undefined variable: points in C:\xampp\htdocs\crypt\crypt-php\login.php on line 66
+[07-Jul-2020 21:37:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
+[07-Jul-2020 21:37:31 Europe/Berlin] PHP Notice:  Undefined variable: lvl in C:\xampp\htdocs\crypt\crypt-php\login.php on line 65
+[07-Jul-2020 21:37:31 Europe/Berlin] PHP Notice:  Undefined variable: points in C:\xampp\htdocs\crypt\crypt-php\login.php on line 66
+[09-Jul-2020 07:40:30 Europe/Berlin] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 99
+[09-Jul-2020 07:40:30 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 110
+[09-Jul-2020 07:43:37 Europe/Berlin] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 89
+[09-Jul-2020 07:43:37 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 07:44:12 Europe/Berlin] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 07:44:12 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 07:45:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php:108
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 108
+[09-Jul-2020 07:45:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php:108
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 108
+[09-Jul-2020 08:00:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php:108
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 108
+[09-Jul-2020 21:56:15 Europe/Berlin] PHP Notice:  Undefined variable: rowNumber in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 99
+[09-Jul-2020 21:56:15 Europe/Berlin] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 21:56:15 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 21:57:02 Europe/Berlin] PHP Notice:  Undefined variable: result in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 21:57:02 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 100
+[09-Jul-2020 21:57:32 Europe/Berlin] PHP Notice:  Undefined variable: rowNumber in C:\xampp\htdocs\crypt\crypt-php\leaderboard.php on line 101
+[09-Jul-2020 22:16:47 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
+[09-Jul-2020 22:16:48 Europe/Berlin] PHP Notice:  Undefined variable: lvl in C:\xampp\htdocs\crypt\crypt-php\login.php on line 65
+[09-Jul-2020 22:16:48 Europe/Berlin] PHP Notice:  Undefined variable: points in C:\xampp\htdocs\crypt\crypt-php\login.php on line 66
