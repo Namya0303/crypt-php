@@ -5,7 +5,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: dashboard.php");
+  header("location: dashboard");
   exit;
 }
  
@@ -55,7 +55,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -92,8 +92,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
                     <p>19th-21st July, 2020.</p>
                     <br>
-                    <a href="register.php" class="button">Register</a>
-                    <a href="question-1.php" class="button">Play</a>
+                    <a href="register" class="button">Register</a>
+                    <a href="login" class="button">Login</a>
                 </div>
             </div>
             <div class="col-md-2"></div>
@@ -109,15 +109,15 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <a href="https://www.instagram.com/ordinatrix20.0/" class="page-links instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
                     <div class="footer-copy font-alt">
-                        <a href="index.php">Home</a>
+                        <a href="index">Home</a>
                         |
-                        <a href="leaderboard.php">Leaderboard</a>
+                        <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="login">Login</a>
                         |
-                        <a href="register.php">Register</a>
+                        <a href="register">Register</a>
                         |
-                        <a href="question-1.php">PlaY</a>
+                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020

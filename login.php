@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: dashboard.php");
+  header("location: dashboard");
   exit;
 }
  
@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["point"] = $points;            
                             
                             // Redirect user to welcome page
-                            header("location: dashboard.php");
+                            header("location: dashboard");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -134,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -176,7 +176,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <input placeholder="Password" name="password" type="password"><br>
                             <span class="help-block"><?php echo $password_err; ?></span>
                         </div>
-                        <p>Don't have an account yet? <a class="blue" href="register.php">Register.</a></p><br><br>
+                        <p>Don't have an account yet? <a class="blue" href="register">Register.</a></p><br><br>
                         <input class="button" type="submit" name="log-in" value="Log In">
                     </form>
                 </div>
@@ -194,15 +194,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <a href="https://www.instagram.com/ordinatrix20.0/" class="page-links instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
                     <div class="footer-copy font-alt">
-                        <a href="index.php">Home</a>
+                        <a href="index">Home</a>
                         |
-                        <a href="leaderboard.php">Leaderboard</a>
+                        <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="rules.php">Rules</a>
+                        <a href="rules">Rules</a>
                         |
-                        <a href="register.php">Register</a>
+                        <a href="register">Register</a>
                         |
-                        <a href="question-1.php">PlaY</a>
+                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020

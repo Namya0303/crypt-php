@@ -6,7 +6,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: dashboard.php");
+  header("location: dashboard");
   exit;
 }
  
@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Execute the prepared statment
             if(mysqli_stmt_execute($stmt)){
                 //redirect to login page
-                header("location: login.php");
+                header("location: login");
             } else{
                 echo "Something went wrong. Please try again.";
             }
@@ -175,7 +175,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.html" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -248,7 +248,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="help-block"><?php echo $confirm_password_err; ?></span>
                         </div>
 
-                        <p>Already have an account? <a class="blue" href="login.php">Login.</a></p><br><br>
+                        <p>Already have an account? <a class="blue" href="login">Login.</a></p><br><br>
 
                         <div class="form-group">
                             <input class="button" type="submit" name="reg_user" value="Submit">
@@ -270,15 +270,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <a href="https://www.instagram.com/ordinatrix20.0/" class="page-links instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
                     <div class="footer-copy font-alt">
-                        <a href="index.php">Home</a>
+                        <a href="index">Home</a>
                         |
-                        <a href="leaderboard.php">Leaderboard</a>
+                        <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="login">Login</a>
                         |
-                        <a href="rules.php">Rules</a>
+                        <a href="rules">Rules</a>
                         |
-                        <a href="question-1.php">PlaY</a>
+                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020

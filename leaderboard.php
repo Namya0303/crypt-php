@@ -1,10 +1,7 @@
 <?php
+
 session_start();
 
-if (!isset($_SESSION['username'])) { 
-    $_SESSION['msg'] = "You have to log in first"; 
-    header('location: login.php'); 
-} 
 
 require_once "config.php";
 
@@ -55,7 +52,7 @@ require_once "config.php";
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -122,15 +119,15 @@ require_once "config.php";
                     <a href="https://www.instagram.com/ordinatrix20.0/" class="page-links instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
                     <div class="footer-copy font-alt">
-                        <a href="index.php">Home</a>
+                        <a href="index">Home</a>
                         |
-                        <a href="leaderboard.php">Leaderboard</a>
+                        <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="rules.php">Rules</a>
+                        <a href="logout">LogOut</a>
                         |
-                        <a href="register.php">Register</a>
+                        <a href="rules">Rules</a>
                         |
-                        <a href="question-1.php">PlaY</a>
+                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020

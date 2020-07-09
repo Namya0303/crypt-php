@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['username'])) { 
     $_SESSION['msg'] = "You have to log in first"; 
-    header('location: login.php'); 
+    header('location: login'); 
 } 
 
 // settinng variables
@@ -21,16 +21,16 @@ $result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $htmlno = $result[0]??null;
 if($htmlno == 1){
-    header('location: question-1.php');
+    header('location: question-1');
 }
 if($htmlno == 2){
-    header('location: question-2.php');
+    header('location: question-2');
 }
 if($htmlno == 4){
-    header('location: question-4.php');
+    header('location: question-4');
 }
 if($htmlno == 5){
-    header('location: question-5.php');
+    header('location: question-5');
 }
 if($htmlno !== 3){
     header('404.html');
@@ -86,7 +86,7 @@ $level = $result[0]??null;
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.php" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -139,7 +139,7 @@ $level = $result[0]??null;
             // execute the query
             $stmt->execute();
 
-            header('location: question-4.php');
+            header('location: question-4');
         }
         else
         {
@@ -175,15 +175,15 @@ endif; ?>
                     <a href="https://www.instagram.com/ordinatrix20.0/" class="page-links instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
                     <div class="footer-copy font-alt">
-                        <a href="index.php">Home</a>
+                        <a href="index">Home</a>
                         |
-                        <a href="leaderboard.php">Leaderboard</a>
+                        <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="login.php">Login</a>
+                        <a href="login">Login</a>
                         |
-                        <a href="register.php">Register</a>
+                        <a href="register">Register</a>
                         |
-                        <a href="question-1.php">PlaY</a>
+                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020
