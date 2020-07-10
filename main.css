@@ -522,26 +522,31 @@
         margin: 20 0;
     }
 
-    tr:nth-child(odd) {
+    .leaderboard tr:nth-child(odd) {
         background-color: var(--heading-color);
     }
 
     .rank,
     .name,
-    .level {
+    .level,
+    .points {
         padding: 10;
         border: 1px solid var(--bg-color);
     }
 
     .rank {
-        width: 20%;
+        width: 10%;
     }
 
     .name {
-        width: 60%;
+        width: 50%;
     }
 
     .level {
+        width: 20%;
+    }
+
+    .points {
         width: 20%;
     }
 

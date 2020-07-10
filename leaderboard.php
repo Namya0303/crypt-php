@@ -86,7 +86,7 @@ require_once "config.php";
                     
                     echo "
                     <table class='leaderboard'>
-                        <tr class='lighter'>
+                        <tr>
                             <th class='rank'>Rank</th>
                             <th class='name'>Name</th>
                             <th class='level'>Level</th>
