@@ -8,6 +8,7 @@
         --font-color: #bbb;
         --bg-color: #151515;
         --heading-color: rgba(255, 255, 255, 0.01);
+        --card-bg-color: rgba(20, 20, 20, 0.5);
         --loader-bg-color: #151515;
         --overlay-color: rgba(0, 0, 0, 0.6);
         --scroll-bg-color: #0f0f0f;
@@ -28,6 +29,7 @@
         --font-color: #000;
         --bg-color: #fff;
         --heading-color: rgba(0, 0, 0, 0.1);
+        --card-bg-color: rgba(225, 225, 225, 0.5);
         --loader-bg-color: #ffffff;
         --overlay-color: rgba(255, 255, 255, 0.6);
         --scroll-bg-color: #ddd;
@@ -86,6 +88,33 @@
         color: var(--font-color);
         transition: 0.4s;
         height: 100%;
+    }
+
+    .hint-page {
+        height: 100vh;
+        width: 100vw;
+        max-width: 100vw;
+        overflow-x: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .hint-page::before {
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: change-bg-1 10s loop;
+        -webkit-animation: change-bg-1 10s infinite;
+        -moz-animation: change-bg-1 10s infinite;
+        -o-animation: change-bg-1 10s infinite;
+        background-color: #000;
+        transition: 0.4s;
+        background-position: center;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
     }
 
     hr {
@@ -166,6 +195,7 @@
         border-radius: 0;
         z-index: 500;
         padding: 1% 0;
+        margin: 0 !important;
         color: var(--primary-color);
     }
 
@@ -192,26 +222,39 @@
         transition: 0.4s;
     }
 
-    a.button {
+    .button {
         background-color: var(--secondary-color);
-        color: #fff;
+        color: #fff !important;
         padding: 10 20;
         border-radius: 5px;
         color: #fff;
         text-decoration: none;
         position: relative;
         transition: 0.4s;
-        box-shadow: 0 4px 8px 0 var(--overlay-color);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
         margin: 5;
+        cursor: pointer;
+        border: none;
     }
 
-    .navbar a.button {
+    .button:disabled {
+        background-color: var(--primary-color);
+        box-shadow: none;
+        color: #ffa5a5 !important;
+    }
+
+    .button:disabled:hover {
+        box-shadow: none;
+    }
+
+    .navbar .button {
         float: right;
     }
 
-    a.button:hover {
+    .button:hover {
         background-color: var(--primary-color);
         box-shadow: 0 4px 8px 0 var(--primary-color-half);
+        text-decoration: none;
     }
 
     /* DARK MODE SWITCH */
@@ -367,7 +410,7 @@
     }
 
     .writen {
-        padding: 50;
+        padding: 25 50;
     }
 
     .right {
@@ -479,7 +522,7 @@
         margin: 20 0;
     }
 
-    tr:nth-child(odd){
+    tr:nth-child(odd) {
         background-color: var(--heading-color);
     }
 
@@ -500,6 +543,59 @@
 
     .level {
         width: 20%;
+    }
+
+    /* SHOP */
+
+    .card {
+        background-color: transparent;
+        width: 65%;
+        height: 400px;
+        perspective: 1000px;
+        transition: 0.25s;
+        cursor: pointer;
+        animation: up-down 4s infinite;
+        -webkit-animation: up-down 4s infinite;
+        -moz-animation: up-down 4s infinite;
+        -o-animation: up-down 4s infinite;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .card-front,
+    .card-back {
+        border-radius: 5px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: 0.25s;
+    }
+
+    .card-thing {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.7s;
+        transform-style: preserve-3d;
+    }
+
+    .card-back {
+        background-image: url(images/cards-crypt.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: 0.25s;
+        transform: rotateY(180deg);
+        padding-top: 40%;
+        color: red;
+    }
+
+    .card:hover .card-thing {
+        transform: rotateY(180deg);
     }
 
     /* END */
@@ -742,15 +838,167 @@
         }
     }
 
+    @keyframes change-bg-1 {
+
+        0%,
+        50%,
+        57%,
+        100% {
+            background-image: url(images/bruh.png);
+        }
+
+        51%,
+        56% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @-webkit-keyframes change-bg-1 {
+
+        0%,
+        50%,
+        57%,
+        100% {
+            background-image: url(images/bruh.png);
+        }
+
+        51%,
+        56% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @-moz-keyframes change-bg-1 {
+
+        0%,
+        50%,
+        57%,
+        100% {
+            background-image: url(images/bruh.png);
+        }
+
+        51%,
+        56% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @-o-keyframes change-bg-1 {
+
+        0%,
+        50%,
+        57%,
+        100% {
+            background-image: url(images/bruh.png);
+        }
+
+        51%,
+        56% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @keyframes up-down {
+        0% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+
+        50% {
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -o-transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+    }
+
+    @-webkit-keyframes up-down {
+        0% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+
+        50% {
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -o-transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+    }
+
+    @-moz-keyframes up-down {
+        0% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+
+        50% {
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -o-transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+    }
+
+    @-o-keyframes up-down {
+        0% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+
+        50% {
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -o-transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+    }
+
 
 
 
     /* ____     ____
-   |   \    |   \     |     |   |    |
-   | |\ \   | |\ \    |     |   |    |
-   | |/ /   | |/ /    |     |   |    |
-   |   /    |___/     |     |   |____|
-   |   \    |   \     |     |   |    |
-   | |\ \   |    \    |     |   |    |
-   | |/ /   |     \   |     |   |    |
-   |___/    |      \  \_____/   |    | */
+       |   \    |   \     |     |   |    |
+       | |\ \   | |\ \    |     |   |    |
+       | |/ /   | |/ /    |     |   |    |
+       |   /    |___/     |     |   |____|
+       |   \    |   \     |     |   |    |
+       | |\ \   |    \    |     |   |    |
+       | |/ /   |     \   |     |   |    |
+       |___/    |      \  \_____/   |    | */
