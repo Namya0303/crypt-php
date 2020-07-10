@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <a href="index.html" class="logo-nav"><img src="images/ordin.png"></a>
+                    <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
                     <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
@@ -92,17 +92,17 @@
                     <a href="https://www.facebook.com/ordinatrix19.0/" class="page-links facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
                     <a href="mailto:ordinatrix10@gmail.com" class="page-links email" target="_blank"><i class="fas fa-envelope"></i></a>
                     <div class="footer-copy font-alt">
-                        <a href="index.html">Home</a>
+                        <a href="index">Home</a>
                         |
-                        <a href="leaderboard.html">Leaderboard</a>
+                        <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="login.html">Login</a>
+                        <a href="login">Login</a>
                         |
-                        <a href="register.html">Register</a>
+                        <a href="register">Register</a>
                         |
-                        <a href="question-1.html">PlaY</a>
+                        <a href="question-1">PlaY</a>
                         |
-                        <a href="rules.html">RULES</a>
+                        <a href="rules">RULES</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020

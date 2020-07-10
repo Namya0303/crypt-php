@@ -552,6 +552,11 @@
 
     /* SHOP */
 
+    .inv p:hover span {
+        color: var(--secondary-color);
+        letter-spacing: 1px;
+    }
+
     .card {
         background-color: transparent;
         width: 65%;
@@ -597,6 +602,10 @@
         transform: rotateY(180deg);
         padding-top: 40%;
         color: red;
+    }
+
+    .invalid {
+        filter: grayscale(90%);
     }
 
     .card:hover .card-thing {
