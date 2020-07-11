@@ -1,0 +1,4 @@
+[11-Jul-2020 21:06:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59
+[11-Jul-2020 21:24:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59
+[11-Jul-2020 21:26:57 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59
+[11-Jul-2020 21:37:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59

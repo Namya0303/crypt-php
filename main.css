@@ -122,15 +122,15 @@
         border-color: #aaa;
     }
 
-a {
-    color: var(--secondary-color);
-    transition: 0.25s;
-}
+    a {
+        color: var(--secondary-color);
+        transition: 0.25s;
+    }
 
-a:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-}
+    a:hover {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
 
     /* LOADER */
 
@@ -146,6 +146,59 @@ a:hover {
         top: 43%;
         width: 50px;
         height: 90px;
+    }
+
+    .loader-thanx {
+        padding-top: 20%;
+    }
+
+    .loader-thanx h1 {
+        font-size: 90;
+        color: var(--primary-color);
+        animation: flicker 1s;
+        -webkit-animation: flicker 1s;
+        -moz-animation: flicker 1s;
+        -o-animation: flicker 1s;
+        animation-delay: 0.4s;
+        -webkit-animation-delay: 0.4s;
+        -moz-animation-delay: 0.4s;
+        -o-animation-delay: 0.4s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        font-weight: 300;
+    }
+
+    .load-thanx {
+        height: 100vh;
+        width: 100vw;
+        max-width: 100vw;
+        overflow-x: hidden;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .load-thanx::before {
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: change-bg-flicker 1s;
+        -webkit-animation: change-bg-flicker 1s;
+        -moz-animation: change-bg-flicker 1s;
+        -o-animation: change-bg-flicker 1s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        background-color: #000;
+        transition: 0.4s;
+        background-position: center;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
     }
 
     .loader div {
@@ -232,7 +285,8 @@ a:hover {
         transition: 0.4s;
     }
 
-    .button, .close {
+    .button,
+    .close {
         background-color: var(--secondary-color) !important;
         opacity: 1 !important;
         color: #fff !important;
@@ -700,9 +754,9 @@ a:hover {
 
     /* MODALS */
 
-.modal{
-    margin-top: 10vh;
-}
+    .modal {
+        margin-top: 10vh;
+    }
 
     .modal-header {
         background-color: #111;
@@ -737,9 +791,9 @@ a:hover {
         z-index: -1;
     }
 
-.modal-content{
-    background-color: transparent;
-}
+    .modal-content {
+        background-color: transparent;
+    }
 
     /* ANIMATIONS */
 
@@ -975,6 +1029,62 @@ a:hover {
         }
     }
 
+    @keyframes change-bg-flicker {
+
+        0%,
+        50%,
+        70% {
+            background-image: url(images/bruh.png);
+        }
+
+        60%,
+        100% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @-webkit-keyframes change-bg-flicker {
+
+        0%,
+        50%,
+        70% {
+            background-image: url(images/bruh.png);
+        }
+
+        60%,
+        100% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @-moz-keyframes change-bg-flicker {
+
+        0%,
+        50%,
+        70% {
+            background-image: url(images/bruh.png);
+        }
+
+        60%,
+        100% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
+    @-o-keyframes change-bg-flicker {
+
+        0%,
+        50%,
+        70% {
+            background-image: url(images/bruh.png);
+        }
+
+        60%,
+        100% {
+            background-image: url(images/bruh1.png);
+        }
+    }
+
     @keyframes up-down {
         0% {
             transform: translateY(20px);
@@ -1066,6 +1176,54 @@ a:hover {
             -o-transform: translateY(20px);
         }
     }
+
+@keyframes flicker {
+    0%, 30%, 50%, 70% {
+        opacity: 0;
+    }
+    40%, 60% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes flicker {
+    0%, 30%, 50%, 70% {
+        opacity: 0;
+    }
+    40%, 60% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes flicker {
+    0%, 30%, 50%, 70% {
+        opacity: 0;
+    }
+    40%, 60% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes flicker {
+    0%, 30%, 50%, 70% {
+        opacity: 0;
+    }
+    40%, 60% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 
