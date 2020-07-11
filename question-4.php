@@ -153,7 +153,7 @@ $level = $result[0]??null;
                             <div class="col-md-8">
                                 <input placeholder="Answer" name="answer-3" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input class="button" type="submit" value="Submit">
+                                <input type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>

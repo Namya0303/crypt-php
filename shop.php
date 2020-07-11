@@ -86,7 +86,7 @@ $htmlno = $result[0]??null;
 }
 ?>
 <html>
-    
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 
@@ -122,52 +122,67 @@ $htmlno = $result[0]??null;
     </div>
 
 
-<div class="mainBod" id="mainBod">
+    <div class="mainBod" id="mainBod">
 
         <div class="modals">
             <!--HINT CARD MODAL-->
             <div class="modal fade bd-example-modal-lg" id="hints" tabindex="-1" role="dialog" aria-labelledby="date-trigger" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title text-center" id="script">Are You Sure?</h2>
-                            </div>
-                            <div class="modal-body">
-                                <h1>Do You Really Wanna Buy A Hint Card?</h1>
-                                <h3>For the Hint, You Must Pay A Price Enough to Put you Far Behind On The Leaderboard</h3>
-                                <h3>SO?????? ARE YOU WILLING TO PAY THE PRICE??</h3>
-                                <div class="row">
-                                <form method="post">
-                                <button name="hintt" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" type="submit">I Need It</button></form> <button type="button" class="close" data-dismiss="modal" aria-label="Close">Eh, I'll Pass</button>
-</div>
-                            </div>
-                            
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title text-center" id="script">Are You Sure?</h2>
                         </div>
-                    </div>
-                </div>
+                        <div class="modal-body">
+                            <div class="writen">
+                                <h3>Do You Really Wanna Buy A Hint Card?</h3>
+                                <h5>For the Hint, You Must Pay A Price Enough to Put you Far Behind On The Leaderboard</h5>
+                                <h5>SO?????? ARE YOU WILLING TO PAY THE PRICE??</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form method="post">
+                                        <button name="hintt" class="button" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" type="submit">I Need It</button>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">Eh, I'll Pass</button>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- SKIP CARD MODAL -->
-                <div class="modal fade bd-example-modal-lg" id="yeet" tabindex="-1" role="dialog" aria-labelledby="date-trigger2" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title text-center" id="script">Are You Sure?</h2>
-                            </div>
-                            <div class="modal-body">
-                                <h1>Do You Really Wanna SKIP THIS LEVEL?</h1>
-                                <h3>TO SKIP THIS LEVEL, You Must Pay A Price Enough to Put you Far Behind On The Leaderboard</h3>
-                                <h3>SO?????? ARE YOU WILLING TO PAY THE PRICE??</h3>
-                                <div class="row">
-                                <form method="post">
-                                <button name="skipp" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" type="submit">I Need It</button></form> <button type="button" class="close" data-dismiss="modal" aria-label="Close">Eh, I'll Pass</button>
-</div>
-                            </div>
-                            
-                        </div>
                     </div>
                 </div>
             </div>
-        
+
+            <!-- SKIP CARD MODAL -->
+            <div class="modal fade bd-example-modal-lg" id="yeet" tabindex="-1" role="dialog" aria-labelledby="date-trigger2" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title text-center" id="script">Are You Sure?</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="writen">
+                                <h3>Do You Really Wanna SKIP THIS LEVEL?</h3>
+                                <h5>TO SKIP THIS LEVEL, You Must Pay A Price Enough to Put you Far Behind On The Leaderboard</h5>
+                                <h5>SO?????? ARE YOU WILLING TO PAY THE PRICE??</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form method="post">
+                                        <button name="skipp" class="button" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" type="submit">I Need It</button></form>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">Eh, I'll Pass</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!---  NAVBAR   --->
 
@@ -205,13 +220,13 @@ $htmlno = $result[0]??null;
                     <h3>Welcome to the shop</h3>
                     <p>You can buy a hint card or a skip card here to aid you in your endeavours.</p>
                     <?php if($hintca != 0) :?>
-                        <p class="inv"><b>Inventory:</b><span> 1x Hint Card</span></p>     
+                    <p class="inv"><b>Inventory:</b><span> 1x Hint Card</span></p>
                     <?php endif ?>
                     <div class="row">
                         <center>
-                    
-                        <!--HINT CARD-->
-                        <?php if($hintca == 0 and $points >= 100) : ?>
+
+                            <!--HINT CARD-->
+                            <?php if($hintca == 0 and $points >= 100) : ?>
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-thing">
@@ -226,13 +241,13 @@ $htmlno = $result[0]??null;
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
-                        <?php if($hintca != 0) : ?>
+                            <?php endif; ?>
+                            <?php if($hintca != 0) : ?>
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-thing">
                                         <div class="card-front invalid">
-                                            <img src="images/hint.png" >
+                                            <img src="images/hint.png">
                                         </div>
                                         <div class="card-back invalid">
                                             <h4>Buy a Hint Card</h4>
@@ -242,8 +257,8 @@ $htmlno = $result[0]??null;
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
-                        <?php if($points < 100 and $hintca == 0 ) : ?>
+                            <?php endif; ?>
+                            <?php if($points < 100 and $hintca == 0 ) : ?>
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-thing">
@@ -258,10 +273,10 @@ $htmlno = $result[0]??null;
                                     </div>
                                 </div>
                             </div>
-                        <?php endif; ?>
+                            <?php endif; ?>
 
-                        <!--SKIP CARD-->
-                        <?php if($points >= 350) : ?>
+                            <!--SKIP CARD-->
+                            <?php if($points >= 350) : ?>
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-thing">
@@ -276,8 +291,8 @@ $htmlno = $result[0]??null;
                                     </div>
                                 </div>
                             </div>
-                        <?php endif ?>
-                        <?php if($points < 350) : ?>
+                            <?php endif ?>
+                            <?php if($points < 350) : ?>
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-thing">
@@ -292,8 +307,8 @@ $htmlno = $result[0]??null;
                                     </div>
                                 </div>
                             </div>
-                        <?php endif ?>
-                        
+                            <?php endif ?>
+
                         </center>
                     </div>
                 </div>

@@ -67,3 +67,13 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\crypt\crypt-php\shop.php on line 37
+[11-Jul-2020 08:01:57 Europe/Berlin] PHP Notice:  Undefined index: username in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\shop.php on line 12
+[11-Jul-2020 08:01:57 Europe/Berlin] PHP Notice:  Undefined index: id in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\shop.php on line 13
+[11-Jul-2020 08:01:57 Europe/Berlin] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\shop.php on line 19
+[11-Jul-2020 08:01:57 Europe/Berlin] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\shop.php on line 24
+[11-Jul-2020 08:01:57 Europe/Berlin] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\shop.php on line 30
+[11-Jul-2020 08:06:38 Europe/Berlin] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\leaderboard.php on line 96
+[11-Jul-2020 08:09:55 Europe/Berlin] PHP Notice:  Undefined index: username in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\question-1.php on line 12
+[11-Jul-2020 08:09:55 Europe/Berlin] PHP Notice:  Undefined index: id in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\question-1.php on line 13
+[11-Jul-2020 08:09:55 Europe/Berlin] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\question-1.php on line 21
+[11-Jul-2020 08:09:55 Europe/Berlin] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, bool given in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\question-1.php on line 42

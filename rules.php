@@ -76,7 +76,7 @@
                         <li>This Crypt Hunt will be spanning over 72 hours, commencing on 16th July'20. All teams will have to try and solve as many stages as possible.</li>
                         <li>On logging into their account, participants will land on the first question. They must solve the standing question to proceed to the next one.
                         <li>If two participants tie up on a level, the one who solved it first would be given preference.</li>
-                        <li>All important information and hints for this event will be released on the <a href="https://discord.gg/3TH32ev" target="_blank">discord server</a> mentioned at serial number 3 above.</li>
+                        <li>All important information and hints for this event will be released on the <a href="https://discord.gg/3TH32ev" target="_blank">discord server</a> mentioned above.</li>
                     </ul>
                 </div>
             </div>

@@ -122,6 +122,16 @@
         border-color: #aaa;
     }
 
+a {
+    color: var(--secondary-color);
+    transition: 0.25s;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
     /* LOADER */
 
     .load {
@@ -222,19 +232,23 @@
         transition: 0.4s;
     }
 
-    .button {
-        background-color: var(--secondary-color);
+    .button, .close {
+        background-color: var(--secondary-color) !important;
+        opacity: 1 !important;
         color: #fff !important;
-        padding: 10 20;
+        padding: 10 20 !important;
         border-radius: 5px;
-        color: #fff;
+        color: #fff !important;
         text-decoration: none;
+        font-size: 15 !important;
+        font-weight: 300 !important;
         position: relative;
         transition: 0.4s;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
         margin: 5;
         cursor: pointer;
         border: none;
+        height: 45px;
     }
 
     .button:disabled {
@@ -252,7 +266,13 @@
     }
 
     .button:hover {
-        background-color: var(--primary-color);
+        background-color: var(--primary-color) !important;
+        box-shadow: 0 4px 8px 0 var(--primary-color-half);
+        text-decoration: none;
+    }
+
+    .close:hover {
+        background-color: var(--primary-color) !important;
         box-shadow: 0 4px 8px 0 var(--primary-color-half);
         text-decoration: none;
     }
@@ -414,11 +434,11 @@
     }
 
     .right {
-        text-align: right;
+        text-align: right !important;
     }
 
     .left {
-        text-align: left;
+        text-align: left !important;
     }
 
     .center {
@@ -677,6 +697,49 @@
         color: var(--primary-color);
         text-decoration: none;
     }
+
+    /* MODALS */
+
+.modal{
+    margin-top: 10vh;
+}
+
+    .modal-header {
+        background-color: #111;
+        ;
+        color: var(--secondary-color);
+        border-bottom: var(--secondary-color) 1px solid;
+    }
+
+    .modal-body {
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+        padding: 50;
+        color: var(--primary-color);
+    }
+
+    .modal-body::before {
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: change-bg-1 10s loop;
+        -webkit-animation: change-bg-1 10s infinite;
+        -moz-animation: change-bg-1 10s infinite;
+        -o-animation: change-bg-1 10s infinite;
+        background-color: #000;
+        transition: 0.4s;
+        background-position: center;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+.modal-content{
+    background-color: transparent;
+}
 
     /* ANIMATIONS */
 

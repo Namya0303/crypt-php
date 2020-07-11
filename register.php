@@ -176,7 +176,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
-                    <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
+                    <a href="https://discord.gg/GCbVdag" target="_blank" class="button">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -251,7 +251,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <p>Already have an account? <a class="blue" href="login">Login.</a></p><br><br>
 
                         <div class="form-group">
-                            <input class="button" type="submit" name="reg_user" value="Submit">
+                            <input type="submit" name="reg_user" value="Submit">
                         </div>
 
                     </form>
