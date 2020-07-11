@@ -25,7 +25,6 @@ $result = mysqli_fetch_row($result);
 $points = $result[0]??null;
 
 //checking htmlno value
-//getting htmlno
 $result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $htmlno = $result[0]??null;
@@ -39,51 +38,27 @@ $htmlno = $result[0]??null;
     $stmt->execute();
     }
 // Skip Level Function -->
-    if(array_key_exists('skipp', $_POST)) {
-        
-        if($htmlno == 0){
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points- $skip_points, htmlno = 1 WHERE id=$id";
+    if($_POST && isset($_POST['ghk'])) {
+        if($htmlno < 5){
+            $sql = "UPDATE users SET lvl= lvl + 1 , htmlno = htmlno + 1, points= points- 350 WHERE id = $id";
             // Prepare statement
             $stmt = $link->prepare($sql);
             // execute the query
             $stmt->execute();
+
+            header ('location: question-1');
         }
-        if($htmlno == 1){
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points - $skip_points, htmlno = 2 WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-        }
-        if($htmlno == 2){
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points - $skip_points, htmlno = 3 WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-        }
-        if($htmlno == 3){
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points - $skip_points, htmlno = 4 WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-        }
-        if($htmlno == 4){
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points - $skip_points, htmlno = 5 WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-        }
+       
         if($htmlno == 5){
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points - $skip_points, htmlno = 1 WHERE id=$id";
+            $sql = "UPDATE users SET lvl= lvl + 1 , points= points - 350, htmlno = 1 WHERE id=$id";
             // Prepare statement
             $stmt = $link->prepare($sql);
             // execute the query
             $stmt->execute();
+
+            header ('location: question-1');
         }
-}
+} 
 ?>
 <html>
 
@@ -170,7 +145,8 @@ $htmlno = $result[0]??null;
                             <div class="row">
                                 <div class="col-md-6">
                                     <form method="post">
-                                        <button name="skipp" class="button" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" type="submit">I Need It</button></form>
+                                        <button name="ghk" class="button"  type="submit">I Need It</button>
+                                    </form>
                                 </div>
                                 <div class="col-md-6">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">Eh, I'll Pass</button>
