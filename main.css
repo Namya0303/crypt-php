@@ -467,6 +467,10 @@
         border-bottom-color: var(--primary-color) !important;
     }
 
+    .question input{
+        text-align: center !important;
+    }
+
     option {
         transition: 0.4s;
         background-color: var(--bg-color);
@@ -567,6 +571,7 @@
     .writen h2 {
         font-size: 40;
         padding-right: 20;
+        padding-left: 20;
     }
 
     .writen p {

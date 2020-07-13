@@ -121,10 +121,6 @@ require_once "config.php";
                     <div class="footer-copy font-alt">
                         <a href="index">Home</a>
                         |
-                        <a href="leaderboard">Leaderboard</a>
-                        |
-                        <a href="logout">LogOut</a>
-                        |
                         <a href="rules">Rules</a>
                         |
                         <a href="question-1">PlaY</a>

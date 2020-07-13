@@ -126,6 +126,8 @@ $points = $result[0]??null;
                         |
                         <a href="logout">Logout</a>
                         |
+                        <a href="shop">Shop</a>
+                        |
                         <a href="rules">Rules</a>
                         |
                         <a href="question-1">PlaY</a>

@@ -20,6 +20,9 @@ $answer_err = "";
 $result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $htmlno = $result[0]??null;
+if($htmlno == 0){
+    header('location: question-0');
+}
 if($htmlno == 1){
     header('location: question-1');
 }
@@ -109,13 +112,14 @@ $level = $result[0]??null;
 
         <!--- HOME --->
 
-        <?php if ($level == 2): ?>
-        <div class="row">
+        <?php if ($level == 3): ?>
+        <div class="row home">
             <div class="col-md-2"></div>
             <div class="col-md-8">
+                
                 <div class="writen center fade">
-                    <h2>Question 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing. The basic text variety</p>
+                    <h2>Question 3</h2>
+                    <p>time to go ice FISHing</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -131,7 +135,7 @@ $level = $result[0]??null;
             $answer = trim($_POST["answer-2"]);
         }
 
-        if ($answer == "hui")
+        if ($answer == "popcornexplosion")
         {
             $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 4 WHERE id=$id";
             // Prepare statement
@@ -148,7 +152,7 @@ $level = $result[0]??null;
     }
 ?>
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                        <div class="row">
+                        <div class="row question">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
                                 <input placeholder="Answer" name="answer-2" type="text"><br>
@@ -165,6 +169,120 @@ $level = $result[0]??null;
         <?php
 endif; ?>
 
+
+<?php if ($level == 8): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                
+                <div class="writen center fade">
+                    <h2>Question 8</h2>
+                    <p>548, 438, 726, 269, 351, 646, 285, 236</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer-2"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-2"]);
+        }
+
+        if ($answer == "thisisez")
+        {
+            $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 4 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-4');
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Please try again.";
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input placeholder="Answer" name="answer-2" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php
+endif; ?>
+
+<?php if ($level == 13): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                
+                <div class="writen center fade">
+                    <h2>Question 13</h2>
+                    <p>It is hard to separate the painting from the painter.</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer-2"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer-2"]);
+        }
+
+        if ($answer == "moneyhunt")
+        {
+            $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 4 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-4');
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Please try again.";
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input placeholder="Answer" name="answer-2" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php
+endif; ?>
         <!---  FOOTER   --->
 
         <div id="end">
@@ -181,7 +299,7 @@ endif; ?>
                         |
                         <a href="login">Login</a>
                         |
-                        <a href="register">Register</a>
+                        <a href="shop">Shop</a>
                         |
                         <a href="question-1">PlaY</a>
                     </div>
@@ -192,6 +310,7 @@ endif; ?>
             </center>
         </div>
 
+    </div>
     </div>
 
     <script src="index.js"></script>

@@ -2,3 +2,6 @@
 [11-Jul-2020 21:24:39 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59
 [11-Jul-2020 21:26:57 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59
 [11-Jul-2020 21:37:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Users\ASUS\Documents\xampp\htdocs\crypt-php\login.php on line 59
+[12-Jul-2020 09:32:37 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
+[12-Jul-2020 09:37:54 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\crypt\crypt-php\login.php on line 59
+[12-Jul-2020 13:01:56 Europe/Berlin] PHP Warning:  mysqli_stmt_bind_param(): Undefined fieldtype t (parameter 8) in C:\xampp\htdocs\crypt\crypt-php\register.php on line 106

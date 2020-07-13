@@ -1,50 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['username']))
-{
-    $_SESSION['msg'] = "You have to log in first";
-    header('location: login');
-}
-// settinng variables
-require_once "config.php";
-clearstatcache();
-$loggedInUsername = $_SESSION['username'];
-$id = $_SESSION['id'];
-$points_lvl = 200;
-$points_dare = 100;
-$lvlup = 1;
-$answer_err = "";
-
-//getting htmlno
-$result = mysqli_query($link, "SELECT htmlno FROM users WHERE id =$id");
-$result = mysqli_fetch_row($result);
-$htmlno = $result[0]??null;
-if($htmlno == 1){
-    header('location: question-1');
-}
-if($htmlno == 2){
-    header('location: question-2');
-}
-if($htmlno == 3){
-    header('location: question-3');
-}
-if($htmlno == 4){
-    header('location: question-4');
-}
-if($htmlno == 5){
-    header('location: question-5');
-}
-if($htmlno !== 0){
-    header('404.php');
-}
-
-
-//getting user lvl
-$result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
-$result = mysqli_fetch_row($result);
-$level = $result[0]??null;
-?>
 
 <html>
 
@@ -70,13 +23,18 @@ $level = $result[0]??null;
 
     <!---  LOADER   --->
 
-    <div class="load load-thanx" id="load">
+    <div class="load" id="load">
         <center>
-            <div class="loader-thanx">
-                <h1>THANK YOU</h1>
+            <div class="loader">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
             </div>
         </center>
     </div>
+
 
     <div class="mainBod" id="mainBod">
 
@@ -108,58 +66,27 @@ $level = $result[0]??null;
         </div>
 
         <!--- HOME --->
-        <?php if ($level == 0): ?>
+
         <div class="row home">
             <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="writen center fade">
-                    <h2>Question 0</h2>
-                    <p> Guess you gotta start somewhere</p>
-                    <?php
-    //Answer check -->
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $answer = "";
-
-        if (empty($_POST["answer-0"]))
-        {
-            $answer_err = "Please enter an answer";
-        }
-        else
-        {
-            $answer = trim($_POST["answer-0"]);
-        }
-
-        if ($answer == "java")
-        {
-            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 1 WHERE id=$id";
-            // Prepare statement
-            $stmt = $link->prepare($sql);
-            // execute the query
-            $stmt->execute();
-
-            header('location: question-1');
-        }
-    }
-?>
-                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                        <div class="row question">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-0" type="text"><br>
-                                <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
-                            </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </form>
+            <div class="col-md-4">
+                <center>
+                    <img src="images/ordin2.png" class="img-logo invert ">
+                </center>
+            </div>
+            <div class="col-md-4">
+                <div class="writen right ">
+                    <h1>404 File Not Found</h1>
+                    <p>Looking for something?</p>
+                    <p>Confirm Your Leads On The Discord Sever! DM any of the admins:)</p>
+                    <p>Keep Going, You'll get the answer...</p>
+                    <br>
+                    <a href="question-1" class="button">Back to the game</a>
+                    <a href="shop" class="button">Buy a Hint?</a>
                 </div>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
-
 
         <!---  FOOTER   --->
 
@@ -175,9 +102,7 @@ endif; ?>
                         |
                         <a href="leaderboard">Leaderboard</a>
                         |
-                        <a href="logout">Logout</a>
-                        |
-                        <a href="shop">Shop</a>
+                        <a href="rules">Rules</a>
                         |
                         <a href="question-1">PlaY</a>
                     </div>
@@ -189,7 +114,14 @@ endif; ?>
         </div>
 
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="init.js"></script>
     <script src="index.js"></script>
 </body>
 
