@@ -90,6 +90,13 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <h1>Crypt@trix</h1>
                     <p>Cryptic Hunt Event at Ordin@trix 20.0.</p>
                     <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
+                    <p class="time-left">
+                        <b>Time left for the hunt to begin:</b><br>
+                        <span id="days"></span> :
+                        <span id="hours"></span> :
+                        <span id="mins"></span> :
+                        <span id="secs"></span>
+                    </p>
                     <p>19th-21st July, 2020.</p>
                     <br>
                     <a href="register" class="button">Register</a>

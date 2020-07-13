@@ -96,7 +96,13 @@ $points = $result[0]??null;
                     <p>Welcome to Crypt@trix</p>
                     <p><b>Your Level: </b><span><?php echo $level ?></span></p>
                     <p><b>Your Points: </b><span><?php echo $points ?></span></p>
-                    <p>July, 2020.</p>
+                    <p class="time-left">
+                        <b>Time left for the hunt to begin:</b><br>
+                        <span id="days"></span> :
+                        <span id="hours"></span> :
+                        <span id="mins"></span> :
+                        <span id="secs"></span>
+                    </p>
                     <br>
                     <a href="rules" class="button">Rules</a>
                     <a href="question-1" class="button">Play</a>

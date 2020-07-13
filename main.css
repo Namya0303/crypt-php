@@ -7,7 +7,7 @@
         --secondary-color: #c23232;
         --font-color: #bbb;
         --bg-color: #151515;
-        --heading-color: rgba(255, 255, 255, 0.01);
+        --heading-color: rgba(255, 255, 255, 0.05);
         --card-bg-color: rgba(20, 20, 20, 0.5);
         --loader-bg-color: #151515;
         --overlay-color: rgba(0, 0, 0, 0.6);
@@ -509,14 +509,27 @@
         font-weight: 500;
     }
 
+    .writen p {
+        cursor: pointer;
+    }
+
     .writen p span {
         transition: 0.25s;
         cursor: pointer;
+        font-size: 20;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .time-left span {
+        background-color: var(--heading-color);
+        padding: 2px 4px;
+        margin: 2px;
+        border-radius: 2px;
     }
 
     .writen p:hover span {
         color: var(--secondary-color);
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
     }
 
     .img-logo {
