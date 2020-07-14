@@ -68,18 +68,18 @@
     }
 
     ::-moz-selection {
-        color: #fff;
-        background-color: var(--primary-color);
+        color: var(--font-color);
+        background-color: var(--primary-color-half);
     }
 
     ::-webkit-selection {
-        color: #fff;
-        background-color: var(--primary-color);
+        color:var(--font-color);
+        background-color: var(--primary-color-half);
     }
 
     ::selection {
-        color: #fff;
-        background-color: var(--primary-color);
+        color: var(--font-color);
+        background-color: var(--primary-color-half);
     }
 
     body {
@@ -509,10 +509,6 @@
         font-weight: 500;
     }
 
-    .writen p {
-        cursor: pointer;
-    }
-
     .writen p span {
         transition: 0.25s;
         cursor: pointer;
@@ -527,7 +523,7 @@
         border-radius: 2px;
     }
 
-    .writen p:hover span {
+    .writen p span:hover {
         color: var(--secondary-color);
         letter-spacing: 0.5px;
     }
