@@ -19,6 +19,8 @@
         --dark-image: 0.8;
         --red-text: #ff2a2a;
         --bg-img: url(images/back-dark.png);
+        --logo-img: url(images/ordin2-white.png);
+        --logo-img-blood: url(images/ordin3-white.png);
     }
 
     [data-theme="light"] {
@@ -39,6 +41,8 @@
         --invert: invert(0%);
         --dark-image: 1;
         --bg-img: url(images/back.png);
+        --logo-img: url(images/ordin2.png);
+        --logo-img-blood: url(images/ordin3.png);
     }
 
     /* PREREQUISITES */
@@ -530,9 +534,21 @@
 
     .img-logo {
         max-width: 100%;
-        opacity: 0.9;
         height: 65%;
+        z-index: 1;
+        opacity: 0.9;
         transition: 0.4s;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: change-bg 10s loop;
+        animation-fill-mode: both;
+        -webkit-animation: change-bg 10s infinite;
+        -webkit-animation-fill-mode: both;
+        -moz-animation: change-bg 10s infinite;
+        -moz-animation-fill-mode: both;
+        -o-animation: change-bg 10s infinite;
+        -o-animation-fill-mode: both;
     }
 
     .fade {
@@ -980,6 +996,66 @@
 
         100% {
             opacity: 1;
+        }
+    }
+
+    @keyframes change-bg {
+
+        0%,
+        50%,
+        60%,
+        100% {
+            background-image: var(--logo-img);
+        }
+
+        51%,
+        59% {
+            background-image: var(--logo-img-blood);
+        }
+    }
+
+    @-webkit-keyframes change-bg {
+
+        0%,
+        50%,
+        60%,
+        100% {
+            background-image: var(--logo-img);
+        }
+
+        51%,
+        59% {
+            background-image: var(--logo-img-blood);
+        }
+    }
+
+    @-moz-keyframes change-bg {
+
+        0%,
+        50%,
+        60%,
+        100% {
+            background-image: var(--logo-img);
+        }
+
+        51%,
+        59% {
+            background-image: var(--logo-img-blood);
+        }
+    }
+
+    @-o-keyframes change-bg {
+
+        0%,
+        50%,
+        60%,
+        100% {
+            background-image: var(--logo-img);
+        }
+
+        51%,
+        59% {
+            background-image: var(--logo-img-blood);
         }
     }
 

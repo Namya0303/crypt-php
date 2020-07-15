@@ -109,8 +109,8 @@ $points = $result[0]??null;
                 </div>
             </div>
             <div class="col-md-4">
-                <center>
-                    <img src="images/ordin2.png" class="img-logo invert slide-right">
+                <center class="slide-right">
+                    <img src="images/ordin4.png" class="img-logo">
                 </center>
             </div>
             <div class="col-md-2"></div>

@@ -81,8 +81,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         <div class="row home">
             <div class="col-md-2"></div>
             <div class="col-md-4">
-                <center>
-                    <img src="images/ordin2.png" class="img-logo invert slide-left">
+                <center class="slide-left">
+                    <img src="images/ordin4.png" class="img-logo">
                 </center>
             </div>
             <div class="col-md-4">
