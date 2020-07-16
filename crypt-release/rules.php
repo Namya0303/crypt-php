@@ -73,29 +73,30 @@
                     <h3>General Rules</h3>
                     <ul>
                         <li>This event is open for all students of a registered school.</li>
-                        <li>All participants must join the <a href="https://discord.gg/GCbVdag" target="_blank">discord server</a> for Crypt@trix</li>
-                        <li>This Crypt Hunt will be spanning over 72 hours, commencing on 16th July'20. All teams will have to try and solve as many stages as possible.</li>
+                        <li>All participants must join the <a href="https://discord.gg/GCbVdag" target="_blank">discord server</a> for Crypt@trix.</li>
+                        <li>This Crypt Hunt will be spanning over 72 hours, commencing on 20th July'20. All teams will have to try and solve as many stages as possible.</li>
                         <li>On logging into their account, participants will land on the first question. They must solve the standing question to proceed to the next one.</li>
                         <li>If two participants tie up on a level, the one who solved it first would be given a higher rank.</li>
+                        <li><b>Any attempt at breaking the platform will lead to a ban and boot from the discord server</b></li>
                     </ul>
                     <h3>Registration</h3>
                     <ul>
-                        <li>The event is open for as many participants to register, however <b>multiple accounts by a single person are not allowed.</b> If Caught having multiple accounts, all accounts belonging to that person will be banned</li>
-                        <li>Just as for the rest of the events , the students of tagore International School Vasant Vihar will also be taking part in the hunt but the participation will not be competitive and the final leaderboard wont be including the students from our school</li>
-                        <li><b>FOR TAGOREANS ONLY:</b> Even though you guys wont be on the final leaderboard, dont worry we will award you for your merit</li>
+                        <li>The event is open for as many participants to register, however <b>multiple accounts by a single person are not allowed.</b> If caught having multiple accounts, all accounts belonging to that person will be banned.</li>
+                        <li>Just as for the rest of the events, the students of Tagore International School, Vasant Vihar will also be taking part in the hunt but the participation will not be competitive and the final leaderboard won't be including the students from our school.</li>
+                        <li><b>FOR TIS, VV STUDENTS ONLY:</b> Even though you guys won't be on the final leaderboard, dont worry, we will award you for your merit.</li>
                     </ul>
                     <h3>Hints & Level Skip</h3>
                     <ul>
-                        <li>In case the admins feel participants are facing difficulties on a particular level, hints will be released publically totally at the admins discretion</li>
-                        <li>Hints can also be bought from the <a href="shop">shop</a> for 100 points. Upon buying a hint card, participants are required to send a screenshot of the same to the admins to redeem their hints</li>
+                        <li>In case the admins feel participants are facing difficulties on a particular level, hints will be released publically totally at the admins discretion.</li>
+                        <li>Hints can also be bought from the <a href="shop">shop</a> for 100 points. Upon buying a hint card, participants are required to send a screenshot of the same to the admins to redeem their hints.</li>
                         <li><a href="shop">The shop</a> also has a level skip card for 350 points. Participants are however discouraged to use the same</li>
-                        <li>Admins with the tag 'Leaders' will be confirming leads on dm (a bad pun proundly intended) </li>
+                        <li>Admins with the tag 'Leaders' will be confirming leads on dm (a bad pun proudly intended) </li>
                         <li>All important information and hints for this event will be released on the <a href="https://discord.gg/GCbVdag" target="_blank">discord server</a></li>
                     </ul>
                     <h3>Awards</h3>
                     <ul>
-                        <li><b>Certificates will not be issues for participation</b></li>
-                        <li>The top 3 positions will be awarded with a Digital Certificate which will be sent on their reistered email-ids</li>
+                        <li><b>Certificates will not be issued for participation</b></li>
+                        <li>The top 3 positions will be awarded with a Digital Certificate which will be sent on their school's registered email-ids.</li>
                     </ul>
 
                 </div>
