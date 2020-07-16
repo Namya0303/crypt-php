@@ -145,7 +145,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/ordin.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -225,6 +225,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <option value="DPS Indirapuram">DPS Indirapuram</option>
                                 <option value="AFBBS">Air Force Bal Bharti</option>
                                 <option value="DPSRKP">DPS RK Puram</option>
+                                <option value="DPS Noida">DPS Noids</option>
+                                <option value="Indraprastha">Indraprastha</option>
+                                <option value="Gyan Bharti">Gyan Bharti</option>
+                                <option value="TISEOK">TIS EOK</option>
+                                <option value="Chinmaya">Chinmaya Vidyalya</option>
+                                <option value="MCS D">Mt. Carmel Dwarka</option>
+                                <option value="Bluebells">Bluebells</option>
+                                <option value="SRDAV">SRDAV</option>
+                                <option value="Bloom">Bloom Public</option>
+                                <option value="FAPS">Frank Anthony</option>
+                                <option value="Lotus">Lotus valley gurgaon</option>
+                                <option value="TISVV">TIS Vasant Vihar</option>
+                                <option value="BVN">Birla Vidya Niketan</option>
+                                <option value="MODERN">Modern School Barakhamba</option>
+                                <option value="MSM">Mt. St. Mary's</option>
+                                <option value="MCSA">Mt. Carmel Anandniketan</option>
+                                <option value="DPSD">DPS Dwarka</option>
+                                <option value="TSRSM">The Sri Ram Moulsari</option>
                             </select>
                             <span class="help-block"><?php echo $school_err; ?></span>
                         </div>

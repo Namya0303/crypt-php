@@ -56,7 +56,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
-                    <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
+                    <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -97,7 +97,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                         <span id="mins"></span> :
                         <span id="secs"></span>
                     </p>
-                    <p>20th-22nd July, 2020.</p>
+                    <p>20th-22st July, 2020.</p>
                     <br>
                     <a href="register" class="button">Register</a>
                     <a href="login" class="button">Login</a>
