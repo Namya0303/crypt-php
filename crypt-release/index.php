@@ -97,7 +97,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                         <span id="mins"></span> :
                         <span id="secs"></span>
                     </p>
-                    <p>19th-21st July, 2020.</p>
+                    <p>20th-22nd July, 2020.</p>
                     <br>
                     <a href="register" class="button">Register</a>
                     <a href="login" class="button">Login</a>
