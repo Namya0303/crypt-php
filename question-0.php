@@ -73,7 +73,7 @@ $level = $result[0]??null;
     <div class="load load-thanx" id="load">
         <center>
             <div class="loader-thanx">
-                <h1>THANK YOU</h1>
+                <h1>YOU SHOULDN'T HAVE DONE THAT...</h1>
             </div>
         </center>
     </div>
