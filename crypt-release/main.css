@@ -1003,13 +1003,13 @@
 
         0%,
         50%,
-        60%,
+        70%,
         100% {
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
@@ -1018,13 +1018,13 @@
 
         0%,
         50%,
-        60%,
+        70%,
         100% {
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
@@ -1033,13 +1033,13 @@
 
         0%,
         50%,
-        60%,
+        70%,
         100% {
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
@@ -1053,8 +1053,8 @@
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
