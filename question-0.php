@@ -44,6 +44,10 @@ if($htmlno !== 0){
 $result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $level = $result[0]??null;
+$_SESSION['level'] = $level;
+
+//js stuff variable
+$level_value=(isset($_SESSION['level']))?$_SESSION['level']:'';
 ?>
 
 <html>
@@ -58,12 +62,16 @@ $level = $result[0]??null;
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,400italic,500,100italic,700' rel='stylesheet' type='text/css'>
     <script src="fontawesome.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans|Special+Elite" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script>
+        //setting variables
+        var yeet = '<?php echo $level_value; ?>';
+        var username = '<?php echo $loggedInUsername; ?>';
+    </script>
 </head>
 
 <body onload="myFunction()">
@@ -121,13 +129,13 @@ $level = $result[0]??null;
     {
         $answer = "";
 
-        if (empty($_POST["answer-0"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-0"]);
+            $answer = trim($_POST["answer"]);
         }
 
         if ($answer == "java")
@@ -146,9 +154,9 @@ $level = $result[0]??null;
                         <div class="row question">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-0" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -189,8 +197,16 @@ endif; ?>
         </div>
 
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="init.js"></script>
     <script src="index.js"></script>
+    <script src="logs.js"></script>
 </body>
 
 </html>

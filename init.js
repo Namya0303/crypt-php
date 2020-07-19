@@ -1,15 +1,17 @@
 (function () {
-    var firebaseConfig = {
-        apiKey: "AIzaSyBARENZnqPuYpswQuwJpDdZeq4texweTVg",
-        authDomain: "crypt-ordin2020.firebaseapp.com",
-        databaseURL: "https://crypt-ordin2020.firebaseio.com",
-        projectId: "crypt-ordin2020",
-        storageBucket: "crypt-ordin2020.appspot.com",
-        messagingSenderId: "918530803353",
-        appId: "1:918530803353:web:8b14239121eca89ca31a08",
-        measurementId: "G-97QZJ0ZH35"
-    };
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+   // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDkXj55RVpct0KBcX7wjH9Zhsy4vIx02rw",
+    authDomain: "crypt-ordin2020-6eba9.firebaseapp.com",
+    databaseURL: "https://crypt-ordin2020-6eba9.firebaseio.com",
+    projectId: "crypt-ordin2020-6eba9",
+    storageBucket: "crypt-ordin2020-6eba9.appspot.com",
+    messagingSenderId: "883318491081",
+    appId: "1:883318491081:web:dfee68d1c5720e4ad7ca18",
+    measurementId: "G-8FKE1HZQ01"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 }());
 

@@ -59,8 +59,6 @@ $level = $result[0]??null;
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -117,23 +115,23 @@ $level = $result[0]??null;
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 2</h2>
-                    <p><img class="invert" src="images/question.png"></p>
+                    <p>Into the night, he burns a city,</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-1"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-1"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "mortentyldum")
+        if ($answer == "keanureeves")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl, htmlno = 3 WHERE id=$id";
             // Prepare statement
@@ -153,9 +151,9 @@ $level = $result[0]??null;
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -166,7 +164,6 @@ $level = $result[0]??null;
         </div>
         <?php
 endif; ?>
-
 
 <?php if ($level == 7): ?>
         <div class="row">
@@ -174,23 +171,23 @@ endif; ?>
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 7</h2>
-                    <p><embed src="images/daeye.mp4"></p>
+                    <p>His highs are very high but he doesn't recover from the lows.</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-1"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-1"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "appoplexian")
+        if ($answer == "icarus")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl, htmlno = 3 WHERE id=$id";
             // Prepare statement
@@ -210,9 +207,9 @@ endif; ?>
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -223,30 +220,31 @@ endif; ?>
         </div>
         <?php
 endif; ?>
+
 
 <?php if ($level == 12): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
-                    <h2>Question 7</h2>
-                    <p>Dont look at his picture you will not survive........</p>
+                    <h2>Question 12</h2>
+                    <p>548, 438, 726, 269, 351, 646, 285, 236</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-1"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-1"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "96")
+        if ($answer == "thisisez")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl, htmlno = 3 WHERE id=$id";
             // Prepare statement
@@ -266,9 +264,9 @@ endif; ?>
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -277,35 +275,31 @@ endif; ?>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
+        <?php endif; ?>
 
-<?php if ($level == 17): ?>
+        <?php if ($level == 17): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 17</h2>
-                    <p>zfc8878<br>
-// /// \// 4 3 2 5 <br>
-myyux://nrlzw.htr/JsAJnB5<br>
-u0b3475</p>
+                    <p><img src="images/pahad.png"></p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-1"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-1"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "n88ap")
+        if ($answer == "jacklin")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup, points= points + $points_lvl, htmlno = 3 WHERE id=$id";
             // Prepare statement
@@ -325,9 +319,9 @@ u0b3475</p>
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-1" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -336,10 +330,7 @@ u0b3475</p>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
-
-
+        <?php endif; ?>
         <!---  FOOTER   --->
 
         <div id="end">
@@ -368,8 +359,17 @@ endif; ?>
         </div>
 
     </div>
-
+    
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="init.js"></script>
     <script src="index.js"></script>
+    <script src="logs.js"></script>
 </body>
 
 </html>

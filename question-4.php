@@ -118,20 +118,20 @@ $level = $result[0]??null;
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 4</h2>
-                    <p><img src="images/pehleistimalkareinfirvishwaskarein.png"></p>
+                    <p><img src="images/pehleistimalkareinfirvishwaskarein.png" ></p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-3"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-3"]);
+            $answer = trim($_POST["answer"]);
         }
 
         if ($answer == "angel")
@@ -154,9 +154,9 @@ $level = $result[0]??null;
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-3" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -172,24 +172,24 @@ $level = $result[0]??null;
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
-                    <h2>Question 4</h2>
-                    <p>Into the night, he burns a city.</p>
+                    <h2>Question 9</h2>
+                    <p>2010....The place of kings</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-3"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-3"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "keanureeves")
+        if ($answer == "ranthambore")
         {
             $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 5 WHERE id=$id";
             // Prepare statement
@@ -209,9 +209,9 @@ $level = $result[0]??null;
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-3" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -221,7 +221,6 @@ $level = $result[0]??null;
             <div class="col-md-2"></div>
         </div>
         <?php endif; ?>
-
 
         <?php if ($level == 14): ?>
         <div class="row">
@@ -229,23 +228,24 @@ $level = $result[0]??null;
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 14</h2>
-                    <p>We've heard stories from the outlands about the giant.He is often seen walking strait. Y ADEM</p>
+                    <img src="images/yeet.png" class="question-image">
+                    <p>uggcf://lbhgh.or/jFDf1b5vkrt</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-3"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-3"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "se")
+        if ($answer == "biden")
         {
             $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 5 WHERE id=$id";
             // Prepare statement
@@ -265,9 +265,9 @@ $level = $result[0]??null;
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-3" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -277,6 +277,63 @@ $level = $result[0]??null;
             <div class="col-md-2"></div>
         </div>
         <?php endif; ?>
+
+        <?php if ($level == 19): ?>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 19</h2>
+                    <img src="images/kaanta.jpg" class="question-image">
+                    <p>Always Watching</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "totheark")
+        {
+            $sql = "UPDATE users SET lvl = lvl + $lvlup , points= points + $points_lvl, htmlno = 5 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-5');
+        }
+        else
+        {
+            $answer_err = "Wrong Answer! Please try again.";
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+        
 
         <!---  FOOTER   --->
 
@@ -307,7 +364,16 @@ $level = $result[0]??null;
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="init.js"></script>
     <script src="index.js"></script>
+    <script src="logs.js"></script>
 </body>
 
 </html>

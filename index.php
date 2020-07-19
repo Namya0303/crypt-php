@@ -56,7 +56,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <a href="index" class="logo-nav"><img src="images/ordin.png"></a>
-                    <a class="button" href="https://discord.gg/3TH32ev" target="_blank">Join the Discord</a>
+                    <a class="button" href="https://discord.gg/GCbVdag" target="_blank">Join the Discord</a>
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -97,7 +97,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                         <span id="mins"></span> :
                         <span id="secs"></span>
                     </p>
-                    <p>19th-21st July, 2020.</p>
+                    <p>20th-22st July, 2020.</p>
                     <br>
                     <a href="register" class="button">Register</a>
                     <a href="login" class="button">Login</a>
@@ -123,8 +123,6 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                         <a href="login">Login</a>
                         |
                         <a href="register">Register</a>
-                        |
-                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020
@@ -134,15 +132,10 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         </div>
 
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="init.js"></script>
     <script src="index.js"></script>
+    <script src="count.js"></script>
 </body>
 
 </html>

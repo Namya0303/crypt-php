@@ -119,6 +119,7 @@ $level = $result[0]??null;
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 1</h2>
+                    <!--<p>abbaa aabaa babaa abbba aabbb abbab abbaa aabaa babaa aabbb abbab aaabb abaaa baaab</p> -->
                     <p>01101011 01110111 01110111 01110011 00111010<br>
 00101111 00101111 01100101 01101100 01110111 <br>
 01101111 01100010 00101110 01100110 01110010 <br> 
@@ -130,13 +131,13 @@ $level = $result[0]??null;
     {
         $answer = "";
 
-        if (empty($_POST["answer-0"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-0"]);
+            $answer = trim($_POST["answer"]);
         }
 
         if ($answer == $loggedInUsername)
@@ -155,9 +156,9 @@ $level = $result[0]??null;
                         <div class="row question">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-0" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -168,30 +169,30 @@ $level = $result[0]??null;
         </div>
         <?php
 endif; ?>
-
 <?php if ($level == 6): ?>
         <div class="row home">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 6</h2>
-                    <p>Looks like Paul is in the NewMaker Plane</p>
+                    
+                    <p>Money isn't the only thing he burns</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-0"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-0"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "marvin")
+        if ($answer == "pabloescobar")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
             // Prepare statement
@@ -207,9 +208,9 @@ endif; ?>
                         <div class="row question">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-0" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -220,31 +221,31 @@ endif; ?>
         </div>
         <?php
 endif; ?>
-
 
 <?php if ($level == 11): ?>
         <div class="row home">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
-                    <h2>Question 6</h2>
-                    <p>84 82 65 68 69 77 65 82 75</p>
+                    <h2>Question 11</h2>
+                    
+                    <p>It is hard to separate the painting from the painter.</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-0"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-0"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "aptivplc")
+        if ($answer == "moneyhunt")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
             // Prepare statement
@@ -260,9 +261,9 @@ endif; ?>
                         <div class="row question">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-0" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -271,33 +272,33 @@ endif; ?>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
+        <?php endif; ?>
 
-
+        
 <?php if ($level == 16): ?>
         <div class="row home">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="writen center fade">
                     <h2>Question 16</h2>
-                    <p>imgur is quite the interesting place isn't it?</p>
+                    
+                    <p>When L Ron Hubbard died where did he go?</p>
                     <?php
     //Answer check -->
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $answer = "";
 
-        if (empty($_POST["answer-0"]))
+        if (empty($_POST["answer"]))
         {
             $answer_err = "Please enter an answer";
         }
         else
         {
-            $answer = trim($_POST["answer-0"]);
+            $answer = trim($_POST["answer"]);
         }
 
-        if ($answer == "ones-and-zer0es.mpeg")
+        if ($answer == "venus")
         {
             $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
             // Prepare statement
@@ -313,9 +314,9 @@ endif; ?>
                         <div class="row question">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <input placeholder="Answer" name="answer-0" type="text"><br>
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
                                 <span class="red"><?php echo $answer_err ?><br></span>
-                                <input type="submit" value="Submit">
+                                <input id="submitb" type="submit" value="Submit">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -324,8 +325,8 @@ endif; ?>
             </div>
             <div class="col-md-2"></div>
         </div>
-        <?php
-endif; ?>
+        <?php endif; ?>
+
         <!---  FOOTER   --->
 
         <div id="end">
@@ -355,7 +356,16 @@ endif; ?>
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="init.js"></script>
     <script src="index.js"></script>
+    <script src="logs.js"></script>
 </body>
 
 </html>

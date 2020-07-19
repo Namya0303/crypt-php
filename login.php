@@ -102,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/ordin.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -168,15 +168,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2>Login</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                            <input placeholder="Username" name="username" type="text"><br>
+                            <input placeholder="Username" name="username" type="text" id="username"><br>
                             <span class="help-block"><?php echo $username_err; ?></span>
                         </div>
                         <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                            <input placeholder="Password" name="password" type="password"><br>
+                            <input placeholder="Password" name="password" type="password" id="password"><br>
                             <span class="help-block"><?php echo $password_err; ?></span>
                         </div>
                         <p>Don't have an account yet? <a class="blue" href="register">Register.</a></p><br><br>
-                        <input type="submit" name="log-in" value="Log In">
+                        <input type="submit" name="log-in" value="Log In" id="submitb">
                     </form>
                 </div>
             </div>
@@ -200,8 +200,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <a href="rules">Rules</a>
                         |
                         <a href="register">Register</a>
-                        |
-                        <a href="question-1">PlaY</a>
+                        
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020
@@ -212,6 +211,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="init.js"></script>
+    <script src="login.js"></script>
     <script src="index.js"></script>
 </body>
 

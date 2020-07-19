@@ -34,7 +34,7 @@ $points = $result[0]??null;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/ordin.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -104,8 +104,8 @@ $points = $result[0]??null;
                         <span id="secs"></span>
                     </p>
                     <br>
-                    <a href="rules" class="button">Rules</a>
-                    <a href="question-1" class="button">Play</a>
+                    <a href="shop" class="button ">Shop</a>
+                    <a class="button" href="question-1">Play</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -135,8 +135,6 @@ $points = $result[0]??null;
                         <a href="shop">Shop</a>
                         |
                         <a href="rules">Rules</a>
-                        |
-                        <a href="question-1">PlaY</a>
                     </div>
                     <div class="footer-copy font-alt">
                         © Pyrotech Club 2020
@@ -146,14 +144,11 @@ $points = $result[0]??null;
         </div>
 
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="init.js"></script>
+
+    <script src="count.js"></script>
     <script src="index.js"></script>
 </body>
 

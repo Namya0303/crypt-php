@@ -145,9 +145,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" href="images/ordin.png" type="image/png">
+    
 
 </head>
 
@@ -225,12 +224,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <option value="DPS Indirapuram">DPS Indirapuram</option>
                                 <option value="AFBBS">Air Force Bal Bharti</option>
                                 <option value="DPSRKP">DPS RK Puram</option>
+                                <option value="DPS Noida">DPS Noids</option>
+                                <option value="Indraprastha">Indraprastha</option>
+                                <option value="Gyan Bharti">Gyan Bharti</option>
+                                <option value="TISEOK">TIS EOK</option>
+                                <option value="Chinmaya">Chinmaya Vidyalya</option>
+                                <option value="MCS D">Mt. Carmel Dwarka</option>
+                                <option value="Bluebells">Bluebells</option>
+                                <option value="SRDAV">SRDAV</option>
+                                <option value="Bloom">Bloom Public</option>
+                                <option value="FAPS">Frank Anthony</option>
+                                <option value="Lotus">Lotus valley gurgaon</option>
+                                <option value="TISVV">TIS Vasant Vihar</option>
+                                <option value="BVN">Birla Vidya Niketan</option>
+                                <option value="MODERN">Modern School Barakhamba</option>
+                                <option value="MSM">Mt. St. Mary's</option>
+                                <option value="MCSA">Mt. Carmel Anandniketan</option>
+                                <option value="DPSD">DPS Dwarka</option>
+                                <option value="TSRSM">The Sri Ram Moulsari</option>
                             </select>
                             <span class="help-block"><?php echo $school_err; ?></span>
                         </div>
 
                         <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                            <input name="username" type="text" placeholder="Username" value="<?php echo $username ; ?>"><br>
+                            <input name="username" type="text" placeholder="Username" value="<?php echo $username ; ?>" id="username"><br>
                             <span class="help-block"><?php echo $username_err; ?></span>
                         </div>
 
@@ -240,7 +257,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
 
                         <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                            <input placeholder="Password" name="password" type="password" value="<?php echo $password; ?>"> <br>
+                            <input placeholder="Password" name="password" type="password" value="<?php echo $password; ?>" id="password"> <br>
                             <span class="help-block"><?php echo $password_err; ?></span>
                         </div>
 
@@ -252,7 +269,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <p>Already have an account? <a class="blue" href="login">Login.</a></p><br><br>
 
                         <div class="form-group">
-                            <input type="submit" name="reg_user" value="Submit">
+                            <input type="submit" name="reg_user" value="Submit" id="submitb">
                         </div>
 
                     </form>
@@ -289,7 +306,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
 
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    <script src="init.js"></script>
+    <script src="register.js"></script>
     <script src="index.js"></script>
 </body>
 

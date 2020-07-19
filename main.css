@@ -154,10 +154,13 @@
 
     .loader-thanx {
         padding-top: 20%;
+        width: 90vw;
+        height: 25vh;
     }
 
     .loader-thanx h1 {
-        font-size: 90;
+        font-size: auto;
+        font-family: 'Special Elite', cursive;
         color: var(--primary-color);
         animation: flicker 1s;
         -webkit-animation: flicker 1s;
@@ -171,7 +174,6 @@
         -webkit-animation-fill-mode: both;
         -moz-animation-fill-mode: both;
         -o-animation-fill-mode: both;
-        font-weight: 300;
     }
 
     .load-thanx {
@@ -481,7 +483,8 @@
     }
 
     .question-image {
-        width: 70%;
+        
+        height:50%;
         opacity: var(--dark-image);
     }
 
@@ -1003,13 +1006,13 @@
 
         0%,
         50%,
-        60%,
+        70%,
         100% {
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
@@ -1018,13 +1021,13 @@
 
         0%,
         50%,
-        60%,
+        70%,
         100% {
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
@@ -1033,13 +1036,13 @@
 
         0%,
         50%,
-        60%,
+        70%,
         100% {
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }
@@ -1053,8 +1056,8 @@
             background-image: var(--logo-img);
         }
 
-        52%,
-        58% {
+        53%,
+        67% {
             background-image: var(--logo-img-blood);
         }
     }

@@ -74,7 +74,7 @@ $htmlno = $result[0]??null;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
     <link href='main.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/ordin.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -115,7 +115,7 @@ $htmlno = $result[0]??null;
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <form method="post">
+                                    <form method="post" action="hint.php">
                                         <button name="hintt" class="button" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" type="submit">I Need It</button>
                                     </form>
                                 </div>
