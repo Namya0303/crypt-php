@@ -48,6 +48,10 @@ $_SESSION['level'] = $level;
 
 //js stuff variable
 $level_value=(isset($_SESSION['level']))?$_SESSION['level']:'';
+
+//getting user ip
+require_once "ip.php";
+$_SESSION['ip'] = $ip;
 ?>
 
 <html>
@@ -71,6 +75,7 @@ $level_value=(isset($_SESSION['level']))?$_SESSION['level']:'';
         //setting variables
         var yeet = '<?php echo $level_value; ?>';
         var username = '<?php echo $loggedInUsername; ?>';
+        var kewl = '<?php echo $ip; ?>';
     </script>
 </head>
 
@@ -147,6 +152,8 @@ $level_value=(isset($_SESSION['level']))?$_SESSION['level']:'';
             $stmt->execute();
 
             header('location: question-1');
+        } else {
+            $answer_err = "Wrong Answer!";
         }
     }
 ?>
@@ -206,7 +213,7 @@ endif; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="init.js"></script>
     <script src="index.js"></script>
-    <script src="logs.js"></script>
+    <script src="logs.js"></script> 
 </body>
 
 </html>

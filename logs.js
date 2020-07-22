@@ -5,6 +5,7 @@ const dbRoot = firebase.database();
 authRoot.onAuthStateChanged(function(user){
     if(user){
         var userNaam = user.email.replace('@cryptatrix.com' , '');
+        var uid = user.uid;
 
         const newPostKey = dbRoot.ref(userNaam + "/" + qno).push().key;
         $('#submitb').on('click', function(event){

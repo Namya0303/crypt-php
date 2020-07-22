@@ -97,7 +97,7 @@ $points = $result[0]??null;
                     <p><b>Your Level: </b><span><?php echo $level ?></span></p>
                     <p><b>Your Points: </b><span><?php echo $points ?></span></p>
                     <p class="time-left">
-                        <b>Time left for the hunt to begin:</b><br>
+                        <b>The Hunt Ends In:</b><br>
                         <span id="days"></span> :
                         <span id="hours"></span> :
                         <span id="mins"></span> :

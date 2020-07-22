@@ -44,6 +44,9 @@ if($htmlno !== 1){
 $result = mysqli_query($link, "SELECT lvl FROM users WHERE id =$id");
 $result = mysqli_fetch_row($result);
 $level = $result[0]??null;
+
+
+
 ?>
 
 <html>
@@ -327,6 +330,374 @@ endif; ?>
         </div>
         <?php endif; ?>
 
+        <?php if ($level == 21): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 21</h2>
+                    
+                    <p>Once a label is on something<br>
+It becomes an it<br>
+Like it's no longer alive</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "1925")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($level == 26): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 26</h2>
+                    
+                    <p>zfc8878<br>
+// /// \// 4 3 2 5 <br>
+myyux://nrlzw.htr/JsAJnB5 <br>
+u0b3475 </p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "n88ap")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($level == 31): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 31</h2>
+                    
+                    <p>++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>++++++++.>+.++++++++++++++++.---.---.-.+++++.<-------.>----.-.---------.</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "neuronsgone")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($level == 36): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 36</h2>
+                    
+                    <p>If being a neuroscientist wasn't enough, she is a psychiatrist as well</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "beverlyhofstadter")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($level == 41): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 41</h2>
+                    
+                    <p>This the the creation of a fox named toby</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "papyrus")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($level == 46): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 46</h2>
+                    
+                    <p>84 82 65 68 69 77 65 82 75</p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "aptivplc")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($level == 51): ?>
+        <div class="row home">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="writen center fade">
+                    <h2>Question 51</h2>
+                    
+                    <p><img src="images/Q51.jpg" class="question-image"></p>
+                    <?php
+    //Answer check -->
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $answer = "";
+
+        if (empty($_POST["answer"]))
+        {
+            $answer_err = "Please enter an answer";
+        }
+        else
+        {
+            $answer = trim($_POST["answer"]);
+        }
+
+        if ($answer == "michealafton")
+        {
+            $sql = "UPDATE users SET lvl= lvl + $lvlup , points= points + $points_lvl, htmlno = 2 WHERE id=$id";
+            // Prepare statement
+            $stmt = $link->prepare($sql);
+            // execute the query
+            $stmt->execute();
+
+            header('location: question-2');
+        }
+    }
+?>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <div class="row question">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <input id="answer" placeholder="Answer" name="answer" type="text"><br>
+                                <span class="red"><?php echo $answer_err ?><br></span>
+                                <input id="submitb" type="submit" value="Submit">
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <?php endif; ?>
         <!---  FOOTER   --->
 
         <div id="end">

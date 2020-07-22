@@ -217,7 +217,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
     <script src="init.js"></script>
-    <script src="login.js"></script>
+    <script src="login.js"></script> 
     <script src="index.js"></script>
 </body>
 

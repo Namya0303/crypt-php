@@ -91,7 +91,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                     <p>Cryptic Hunt Event at Ordin@trix 20.0.</p>
                     <p>Join our Discord to stay updated. Google and some brain is all it takes</p>
                     <p class="time-left">
-                        <b>Time left for the hunt to begin:</b><br>
+                        <b>The Hunt Ends IN:</b><br>
                         <span id="days"></span> :
                         <span id="hours"></span> :
                         <span id="mins"></span> :

@@ -24,12 +24,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $name = trim($_POST["name"]);
     }
+
+    if (strpos($name, '<') !== false) {
+        $name_err = "STOP TRYING TO BE HECCKERMEN";
+        header('location: /images/index.html');
+    }
     
     //School -->
     if($_POST["school"] === "1"){
         $school_err = "Please select your school";
     } else{
         $school = trim($_POST["school"]);
+    }
+
+    if (strpos($school, '<') !== false) {
+        $school_err = "STOP TRYING TO BE HECCKERMEN";
+        header('location: /images/index.html');
     }
     //validate username
     if(empty(trim($_POST["username"]))){
@@ -65,6 +75,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
+    if (strpos($username, '<') !== false) {
+        $username_err = "STOP TRYING TO BE HECCKERMEN";
+        header('location: /images/index.html');
+    }
 
     //validate Email Id
     if(empty(trim($_POST["email"]))){
@@ -72,6 +86,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     else{
         $email = trim($_POST["email"]);
+    }
+
+    if (strpos($email, '<') !== false) {
+        $email_err = "STOP TRYING TO BE HECCKERMEN";
+        header('location: /images/index.html');
     }
 
     // VALIDATE PASSWORD

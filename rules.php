@@ -77,10 +77,7 @@
                         <li>This Crypt Hunt will be spanning over 72 hours, commencing on 16th July'20. All teams will have to try and solve as many stages as possible.</li>
                         <li>On logging into their account, participants will land on the first question. They must solve the standing question to proceed to the next one.</li>
                         <li>If two participants tie up on a level, the one who solved it first would be given a higher rank.</li>
-<<<<<<< HEAD
                         <li><b>Any attemt at breaking the platform will lead to a ban and boot from the discord server</b></li>
-=======
->>>>>>> parent of 5ecbb99... shpelling
                     </ul>
                     <h3>Registration</h3>
                     <ul>
@@ -92,10 +89,7 @@
                     <ul>
                         <li>In case the admins feel participants are facing difficulties on a particular level, hints will be released publically totally at the admins discretion</li>
                         <li>Hints can also be bought from the <a href="shop">shop</a> for 100 points. Upon buying a hint card, participants are required to send a screenshot of the same to the admins to redeem their hints</li>
-<<<<<<< HEAD
                         <li>A free hint card is given to everyone upon registration</li>
-=======
->>>>>>> parent of 5ecbb99... shpelling
                         <li><a href="shop">The shop</a> also has a level skip card for 350 points. Participants are however discouraged to use the same</li>
                         <li>Admins with the tag 'Leaders' will be confirming leads on dm (a bad pun proundly intended) </li>
                         <li>All important information and hints for this event will be released on the <a href="https://discord.gg/GCbVdag" target="_blank">discord server</a></li>
