@@ -8,4 +8,4 @@ All pull request merged will be logged here along wiith credits
 
 ##### We hope the event was fun for you to take part in. Please feel free to contact me at <namyachhabra@gmail.com> to leave a review about the event or any suggested changes
 
-##### We had a blast hosting this event. Even the parts when security loopholes were being eploited. :)
+##### We had a blast hosting this event. Even the parts when security loopholes were being exploited. :)
